@@ -1,4 +1,37 @@
-.titulo1{
-    color: rgb(250, 0, 0);
+:root {
+    --color-principal: #FF9A48;
+    --color-secundario: #6A4536;
+    --negro: #000;
+}
+
+body{
+    background-image: url(../img/body.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    background-color: var(--color-principal);
+}
+
+nav ul{
+    list-style: none;
+    background-color: var(--color-principal);
+    width: fit-content;
+    padding: 10px 15px;
+}
+
+nav ul li{
+    padding: 7px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--negro);
+}
+
+nav ul *:hover{
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
 }
 

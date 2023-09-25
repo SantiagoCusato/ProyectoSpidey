@@ -4,28 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Rokkitt|Trirong">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/shurikenLogo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7e53c9d9a2.js" crossorigin="anonymous"></script>
     <title>Shuriken</title>
 </head>
 <body>
     <header class="header">
-        <div class="navIzquierda">
-            <img src="img/menu.png" alt="logoShuriken">
-            <div>
+        <div class="menu-logo flex-row-center">
+            <div class="menu fas fa-bars"></div>
+            <nav class="nav" title="nav">
+                <ul class="nav-ul">
+                    <li><i class="fas fa-gift"></i><a href="#">Gratis</a></li>
+                    <li><i class="fas fa-clock"></i><a href="#">Anticipados</a></li>
+                    <li><i class="fas fa-crosshairs"></i><a href="#">Accion</a></li>
+                    <li><i class="fas fa-mountain"></i><a href="#">Aventura</a></li>
+                </ul>
+            </nav>
+            <div class="logo flex-row-center">
                 <img src="img/shurikenLogo.png" alt="logoShuriken">
                 <h1>Shuriken</h1>
             </div>
         </div>
+
+        <div class="barra-busqueda flex-row-center">
+            <input type="text" placeholder="Buscar">
+            <img src="img/buscar.png" alt="icono-buscar">
+        </div>
         
-        <nav >
+        
+
+        <div class="carrito-biblioteca-cuenta flex-row-center">
+            <img src="img/carrito.png" alt="btn-carrito">
+            <img src="img/biblioteca.png" alt="btn-biblioteca">
+            <img src="img/user.png" alt="btn-usuario">
             <ul>
-                <li><a href="#">Gratis</a></li>
-                <li><a href="#">Anticipados</a></li>
-                <li><a href="#">Accion</a></li>
-                <li><a href="#">Aventura</a></li>
+                <li><i class="fas fa-user"></i><a href="#">Mi Perfil</a></li>
             </ul>
-        </nav>
+        </div>
+
+        
+
+        
     </header>
+    
 </body>
 </html>

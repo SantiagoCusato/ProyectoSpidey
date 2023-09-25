@@ -2,41 +2,111 @@
     --color-principal: #FF9A48;
     --color-secundario: #6A4536;
     --negro: #000;
+    --secundario-t-1: rgba(106, 69, 54, 0.37);
+    --fuente-oscura: #272727;
+}
+
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 body{
+    width: 100%;
     background-image: url(../img/body.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Roboto;
+    height: 1800px;
 }
 
 header{
+    top: 0;
+    position: sticky;
     background-color: var(--color-principal);
+    height: 60px;
     display: flex;
+    flex-wrap: nowrap;
+    flex-grow: inherit;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav{
-    display: none;
+    position: absolute;
+    top: 45px;
+    left: -100%;
 }
 
-nav ul{
+nav ul, div.carrito-biblioteca-cuenta ul{
     list-style: none;
     background-color: var(--color-principal);
     width: fit-content;
     padding: 10px 15px;
 }
 
-nav ul li{
+nav ul li, div.carrito-biblioteca-cuenta ul li{
     padding: 7px;
 }
 
-nav ul li a{
+nav ul li a, div.carrito-biblioteca-cuenta ul li a{
     text-decoration: none;
     color: var(--negro);
 }
 
-nav ul *:hover{
+nav ul *:hover, div.carrito-biblioteca-cuenta ul *{
     color: var(--color-principal);
     background-color: var(--color-secundario);
 }
+
+.menu-logo div.fas{
+    font-size: 40px;
+    padding: 6px 20px;
+}
+
+.menu-logo .logo{
+    display: none;
+}
+
+.menu:hover ~ nav{
+    left: 0%;
+}
+
+.logo h1{
+    font-family: Rokkitt;
+}
+
+.barra-busqueda{
+    width: 100%; height: 40px; 
+    position: relative; 
+    background-color: var(--secundario-t-1);
+    border-radius: 40px;
+}
+
+.barra-busqueda input[type=text]{
+    width: 85%;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 12px 20px 12px 40px;
+}
+
+.barra-busqueda input[type=text]:focus{
+    outline: none;
+}
+
+.barra-busqueda input::placeholder{
+    color: var(--fuente-oscura);
+}
+
+.barra-busqueda img{
+    height: 20px;
+}
+
+.carrito-biblioteca-cuenta img:nth-child(2){
+    display: none;
+}
+
 

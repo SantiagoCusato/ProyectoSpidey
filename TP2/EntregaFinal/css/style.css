@@ -25,57 +25,77 @@ header{
     top: 0;
     position: sticky;
     background-color: var(--color-principal);
-    height: 60px;
+    height: 100px;
+    padding: 6px 20px;
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
-    flex-grow: inherit;
-    justify-content: space-between;
-    align-items: center;
 }
 
-nav{
+header div div *{
+    margin-right: 17px;
+}
+
+header:first-child :last-child :last-child{
+    margin-right: 0;
+}
+
+header div.menu-container{
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+header div.menu-container *{
+    max-height: 40px;
+}
+
+.menu-usuario, .categorias{
     position: absolute;
-    top: 45px;
+    top: 100px;
     left: -100%;
 }
 
-nav ul, div.carrito-biblioteca-cuenta ul{
+nav ul, div.nav ul{
     list-style: none;
     background-color: var(--color-principal);
     width: fit-content;
     padding: 10px 15px;
 }
 
-nav ul li, div.carrito-biblioteca-cuenta ul li{
+nav ul li, div.nav ul li{
     padding: 7px;
 }
 
-nav ul li a, div.carrito-biblioteca-cuenta ul li a{
+nav ul li a, div.nav ul li a{
     text-decoration: none;
     color: var(--negro);
 }
 
-nav ul *:hover, div.carrito-biblioteca-cuenta ul *{
+nav ul *:hover, div.nav ul *:hover{
     color: var(--color-principal);
     background-color: var(--color-secundario);
 }
 
+li i{
+    margin-right: 10px;
+}
+
 .menu-logo div.fas{
     font-size: 40px;
-    padding: 6px 20px;
 }
 
-.menu-logo .logo{
-    display: none;
-}
-
-.menu:hover ~ nav{
-    left: 0%;
-}
 
 .logo h1{
     font-family: Rokkitt;
+    margin-left: -3px;
+    /* display: none; */
 }
+
+.logo *{
+    margin: 0;
+    padding: 0;
+}
+
+
 
 .barra-busqueda{
     width: 100%; height: 40px; 
@@ -105,8 +125,16 @@ nav ul *:hover, div.carrito-biblioteca-cuenta ul *{
     height: 20px;
 }
 
-.carrito-biblioteca-cuenta img:nth-child(2){
+.carrito-biblioteca-cuenta img:nth-child(3){
     display: none;
 }
 
 
+.mostrar-categorias{
+    left: 0;
+}
+
+.mostrar-menu-usuario{
+    left: auto;
+    right: 0;
+}

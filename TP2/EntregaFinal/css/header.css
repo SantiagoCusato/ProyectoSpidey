@@ -82,9 +82,18 @@ nav ul li:hover *, div.nav ul li:hover *{
     color: var(--color-principal);
     background-color: var(--color-secundario);
 }
+li *{
+    display: inline-block;
+}
 
 li i{
-    margin-right: 10px;
+    margin: 0 !important;
+    min-width: 25px;
+}
+li{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
 }
 
 .menu-logo div.fas{

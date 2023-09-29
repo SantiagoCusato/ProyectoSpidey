@@ -32,7 +32,8 @@ header:first-child :last-child :last-child{
 }
 
 header div.menu-container{
-    padding: 15px 0;;
+    padding: 15px 0;
+    width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
 }

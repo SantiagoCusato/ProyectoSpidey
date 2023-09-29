@@ -19,4 +19,5 @@ body{
     background-size: cover;
     font-family: Roboto;
     height: 1800px;
+    overflow: hidden;
 }

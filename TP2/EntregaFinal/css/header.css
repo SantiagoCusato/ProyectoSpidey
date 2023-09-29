@@ -34,6 +34,7 @@ header:first-child :last-child :last-child{
 header div.menu-container{
     margin-bottom: 15px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 header div.menu-container *{
     max-height: 40px;
@@ -86,14 +87,29 @@ li *{
     display: inline-block;
 }
 
-li i{
-    margin: 0 !important;
-    min-width: 25px;
+ul.nav-ul li i, nav.nav ul.nav-ul li i{
+    margin: 0;
+    min-width: 30px;
+    text-align: center;
 }
+
+ul.nav-ul li i::before, nav.nav ul.nav-ul li i::before{
+    height: 16px;
+    width: 16px;
+}
+
+[class^="fa-"], [class*="fa-"] {
+    display: inline-block;
+}
+
+
+
+
 li{
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
+    align-items: baseline;
 }
 
 .menu-logo div.fas{
@@ -104,7 +120,6 @@ li{
 .logo h1{
     font-family: Rokkitt;
     margin-left: -3px;
-    /* display: none; */
 }
 
 .logo *{
@@ -115,10 +130,12 @@ li{
 
 
 .barra-busqueda{
-    width: 100%; height: 40px; 
+    width: 100%; 
+    height: 40px;
     position: relative; 
     background-color: var(--secundario-t-1);
     border-radius: 40px;
+    margin-top: 15px;
 }
 
 .barra-busqueda input[type=text]{
@@ -153,4 +170,41 @@ li{
 
 .mostrar-menu-usuario{
     right: 0;
+    margin: 0;
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+    header{
+        height: fit-content;
+    }
+
+
+    .categorias{
+        top: 70px;
+    }
+    
+    .menu-usuario{
+        top: 70px;
+    }
+
+
+    div.menu-container{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #panel-der{
+        order: 1;
+    }
+    #panel-izq{
+        order: 3;
+    }
+    #b-busqueda{
+        order: 2;
+        max-width: 50%;
+    }
 }

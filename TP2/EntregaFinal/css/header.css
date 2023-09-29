@@ -73,7 +73,12 @@ nav ul li a, div.nav ul li a{
     color: var(--negro);
 }
 
-nav ul *:hover, div.nav ul *:hover{
+nav ul li:hover, div.nav ul li:hover{
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+}
+
+nav ul li:hover *, div.nav ul li:hover *{
     color: var(--color-principal);
     background-color: var(--color-secundario);
 }

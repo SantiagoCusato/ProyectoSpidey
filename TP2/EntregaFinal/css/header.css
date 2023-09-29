@@ -16,7 +16,7 @@ header{
     top: 0;
     position: sticky;
     background-color: var(--color-principal);
-    height: 100px;
+    height: fit-content;
     padding: 6px 20px;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@ header:first-child :last-child :last-child{
 }
 
 header div.menu-container{
-    margin-bottom: 15px;
+    padding: 15px 0;;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -42,14 +42,14 @@ header div.menu-container *{
 
 .categorias{
     position: absolute;
-    top: 100px;
+    top: 125px;
     left: -100%;
     transition: all 0.5s ease-in-out;
 }
 
 .menu-usuario{
     position: absolute;
-    top: 100px;
+    top: 125px;
     right: -100%;
     transition: all 0.5s ease-in-out;
 }
@@ -189,6 +189,10 @@ li{
     
     .menu-usuario{
         top: 70px;
+    }
+
+    .barra-busqueda{
+        margin-top: 0;
     }
 
 

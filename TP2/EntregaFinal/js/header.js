@@ -9,14 +9,10 @@ document.addEventListener('DOMContentLoaded',function menuOn(){
         menuCategorias.classList.toggle("mostrar-categorias");
     });
 
-    let menuUsuario = document.querySelector(".menu-usuario")
+    let menuUsuario = document.querySelector(".menu-usuario");
 
     let botonMenuUsuario = document.querySelector(".btn-usuario");
     botonMenuUsuario.addEventListener("click", function(){
         menuUsuario.classList.toggle("mostrar-menu-usuario");
     });
-
-    
-
-
 });

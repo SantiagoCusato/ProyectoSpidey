@@ -1,0 +1,142 @@
+:root {
+    --color-principal: #FF9A48;
+    --color-secundario: #6A4536;
+    --negro: #000;
+    --secundario-t-1: rgba(106, 69, 54, 0.37);
+    --fuente-oscura: #272727;
+}
+
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header{
+    top: 0;
+    position: sticky;
+    background-color: var(--color-principal);
+    height: 100px;
+    padding: 6px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+header div div *{
+    margin-right: 17px;
+}
+
+header:first-child :last-child :last-child{
+    margin-right: 0;
+}
+
+header div.menu-container{
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+header div.menu-container *{
+    max-height: 40px;
+}
+
+.categorias{
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-usuario{
+    position: absolute;
+    top: 100px;
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+nav.nav ul, div.nav ul{
+    list-style: none;
+    background-color: var(--color-principal);
+    width: fit-content;
+    padding: 10px 15px;
+    height: fit-content;
+    max-height: max-content;
+}
+
+nav ul li, div.nav ul li{
+    padding: 7px;
+}
+
+nav ul li a, div.nav ul li a{
+    text-decoration: none;
+    color: var(--negro);
+}
+
+nav ul *:hover, div.nav ul *:hover{
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+}
+
+li i{
+    margin-right: 10px;
+}
+
+.menu-logo div.fas{
+    font-size: 40px;
+}
+
+
+.logo h1{
+    font-family: Rokkitt;
+    margin-left: -3px;
+    /* display: none; */
+}
+
+.logo *{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.barra-busqueda{
+    width: 100%; height: 40px; 
+    position: relative; 
+    background-color: var(--secundario-t-1);
+    border-radius: 40px;
+}
+
+.barra-busqueda input[type=text]{
+    width: 85%;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 12px 20px 12px 40px;
+}
+
+.barra-busqueda input[type=text]:focus{
+    outline: none;
+}
+
+.barra-busqueda input::placeholder{
+    color: var(--fuente-oscura);
+}
+
+.barra-busqueda img{
+    height: 20px;
+}
+
+.carrito-biblioteca-cuenta img:nth-child(3){
+    display: none;
+}
+
+
+.mostrar-categorias{
+    left: 0;
+}
+
+.mostrar-menu-usuario{
+    right: 0;
+}

@@ -9,6 +9,7 @@ header{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    z-index: 100;
 }
 
 header div div *{

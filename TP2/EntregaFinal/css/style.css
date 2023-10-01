@@ -5,6 +5,9 @@
     --secundario-t-1: rgba(106, 69, 54, 0.37);
     --fuente-oscura: #272727;
     --fuente-clara: #f0ece4;
+    --p-luz-1: #FFC99D;
+    --a-sobra-1: #FF006E;
+    --p-sombra-1: #FF8827;
 }
 
 .flex-row-center{
@@ -15,11 +18,10 @@
 
 body{
     width: 100%;
-    background-image: url(../img/body.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--p-sombra-1);
     font-family: Roboto;
     height: 1800px;
+    min-width: 437px;
     overflow: hidden;
     overflow-y: auto;
 }

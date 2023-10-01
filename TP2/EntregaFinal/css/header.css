@@ -1,16 +1,4 @@
-:root {
-    --color-principal: #FF9A48;
-    --color-secundario: #6A4536;
-    --negro: #000;
-    --secundario-t-1: rgba(106, 69, 54, 0.37);
-    --fuente-oscura: #272727;
-}
-
-.flex-row-center{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+@import "style.css";
 
 header{
     top: 0;
@@ -84,7 +72,7 @@ nav ul li:hover *, div.nav ul li:hover *{
     color: var(--color-principal);
     background-color: var(--color-secundario);
 }
-li *{
+nav ul li *, div.nav ul li *{
     display: inline-block;
 }
 
@@ -103,10 +91,7 @@ ul.nav-ul li i::before, nav.nav ul.nav-ul li i::before{
     display: inline-block;
 }
 
-
-
-
-li{
+nav ul li, div.nav ul li{
     display: flex;
     flex-flow: row;
     justify-content: flex-start;

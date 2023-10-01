@@ -18,6 +18,7 @@
 
 body{
     width: 100%;
+    max-width: 100%;
     background-color: var(--p-sombra-1);
     font-family: Roboto;
     height: 1800px;

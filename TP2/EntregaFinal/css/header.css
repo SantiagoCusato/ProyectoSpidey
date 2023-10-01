@@ -9,7 +9,7 @@ header{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    z-index: 100;
+    z-index: 400;
 }
 
 header div div *{
@@ -30,6 +30,10 @@ header div.menu-container *{
     max-height: 40px;
 }
 
+header div.menu-container div div.menu-usuario{
+    max-height: none;
+}
+
 .categorias{
     position: absolute;
     top: 125px;
@@ -39,11 +43,23 @@ header div.menu-container *{
 
 .menu-usuario{
     position: absolute;
-    top: 125px;
-    right: -100%;
     transition: all 0.5s ease-in-out;
+    height: max-content;
+    max-height: none;
+    overflow: hidden;
+    right: -50%;
+    top: 125px;
 }
 
+
+.mostrar-categorias{
+    left: 0;
+}
+
+.mostrar-menu-usuario{
+    right: 0;
+    margin: 0;
+}
 
 
 nav.nav ul, div.nav ul{
@@ -151,14 +167,6 @@ nav ul li, div.nav ul li{
 }
 
 
-.mostrar-categorias{
-    left: 0;
-}
-
-.mostrar-menu-usuario{
-    right: 0;
-    margin: 0;
-}
 
 
 @media only screen and (min-width: 768px) {
@@ -185,10 +193,10 @@ nav ul li, div.nav ul li{
         flex-wrap: nowrap;
     }
 
-    #panel-der{
+    #panel-izq{
         order: 1;
     }
-    #panel-izq{
+    #panel-der{
         order: 3;
     }
     #b-busqueda{

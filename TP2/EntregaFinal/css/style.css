@@ -21,7 +21,7 @@ body{
     background-color: var(--p-sombra-1);
     font-family: Roboto;
     height: 1800px;
-    min-width: 437px;
+    min-width: 374px;
     overflow: hidden;
     overflow-y: auto;
 }

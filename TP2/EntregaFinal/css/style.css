@@ -1,13 +1,27 @@
 :root {
     --color-principal: #FF9A48;
+    --p-transparencia-1: #ff9a48cf;
+    --p-luz-1: #FFC99D;
+    --p-sombra-1: #FF8827;
+
+
     --color-secundario: #6A4536;
-    --negro: #000;
+    --s-luz-1: #784E3D;
+    --s-sombra-1: #38241D;
     --secundario-t-1: rgba(106, 69, 54, 0.37);
+
+    --acento: #FB4091;
+    --a-sombra-1: #FF006E;
+
+
+    --negro: #000;
     --fuente-oscura: #272727;
     --fuente-clara: #f0ece4;
-    --p-luz-1: #FFC99D;
-    --a-sobra-1: #FF006E;
-    --p-sombra-1: #FF8827;
+
+    --fondo-gratis: #6DBC3C;
+    --fuente-gratis: #7EFB32;
+
+    --fondo-jugar: #4759FF;
 }
 
 .flex-row-center{
@@ -23,6 +37,22 @@ body{
     font-family: Roboto;
     height: 1800px;
     overflow-x: hidden;
+}
+
+.titulo-1, .titulo-3, .titulo-4{
+    color: var(--fuente-clara);
+    filter: drop-shadow(var(--negro) 1px 4px  2px);
+}
+
+.titulo-3{
+    margin: 7px 0px;
+    filter: drop-shadow(var(--negro) 1px 4px  );
+}
+
+.titulo-4{
+    filter: none;
+    margin: 0;
+
 }
 
 @media only screen and (min-width: 768px) {

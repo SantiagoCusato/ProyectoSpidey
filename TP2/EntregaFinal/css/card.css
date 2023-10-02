@@ -1,0 +1,69 @@
+@media only screen and (min-width: 768px) {
+
+    div.card{
+        padding: 2px;
+        background-color: var(--color-secundario);
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.card img{
+        height: 183px;
+        width: 100%;
+    }
+
+    div.card h4{
+        background-color: var(--s-sombra-1);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-left: 4px;
+    }
+
+    div.card div.estado-juego{
+        width: calc(100% - 18px);
+        padding: 6px 9px;
+        background-color: var(--p-transparencia-1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    div.card div.estado-juego span{
+        border-radius: 5px;
+        padding: 3px 19px;
+        font-size: 18.4px;
+    }
+
+    .precio{
+        background-color: var(--color-secundario);
+        color: var(--p-luz-1);
+    }
+
+    div.card div.estado-juego span.agregar-juego{
+        transition: background-color 0.5s;
+        padding: 3px 9px;
+        font-size: 21.15px;
+    }
+
+    .agregar-juego{
+        background-color: var(--acento);
+    }
+
+    .agregar-juego:hover{
+        background-color: var(--a-sombra-1);
+    }
+
+    .gratis{
+        background-color: var(--fondo-gratis);
+        color: var(--fuente-gratis);
+        margin: 0px auto;
+    }
+
+    .jugar{
+        color: var(--fuente-clara);
+        background-color: var(--fondo-jugar);
+        margin: 0px auto;
+    }
+
+}

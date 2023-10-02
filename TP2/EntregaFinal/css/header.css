@@ -4,7 +4,7 @@ header{
     max-width: 100%;
     top: 0;
     position: sticky;
-    z-index: 200;
+    z-index: 400;
     background-color: var(--color-principal);
     height: fit-content;
     padding: 6px 20px;

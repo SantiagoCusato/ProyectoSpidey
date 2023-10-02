@@ -23,6 +23,4 @@ body{
     font-family: Roboto;
     height: 1800px;
     min-width: 374px;
-    overflow: hidden;
-    overflow-y: auto;
 }

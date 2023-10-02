@@ -38,7 +38,7 @@ header div.menu-container div div.menu-usuario{
 .categorias{
     position: absolute;
     top: 125px;
-    left: -44%;
+    left: -60%;
     transition: all 0.5s ease-in-out;
 }
 
@@ -48,7 +48,7 @@ header div.menu-container div div.menu-usuario{
     height: max-content;
     max-height: none;
     overflow: hidden;
-    right: -50%;
+    right: -60%;
     top: 125px;
 }
 

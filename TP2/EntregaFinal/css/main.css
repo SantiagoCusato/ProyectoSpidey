@@ -33,7 +33,7 @@ section{
     text-decoration: none;
     background-color: var(--p-luz-1);
     color: var(--color-secundario);
-    padding: 16px 40px;
+    padding: 9px 20px;
     border-radius: 15px;
     font-size: 20px;
     font-weight: bold;
@@ -96,6 +96,10 @@ h1.nombre-juego{
     
     h1.nombre-juego{
         font-size: 200%;
+    }
+
+    .ver-mas-a{
+        padding: 16px 40px;
     }
     
 

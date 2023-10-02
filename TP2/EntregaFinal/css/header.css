@@ -1,6 +1,7 @@
 @import "style.css";
 
 header{
+    min-width: 310px;
     max-width: 100%;
     top: 0;
     position: fixed;
@@ -174,6 +175,10 @@ nav ul li, div.nav ul li{
     header{
         height: fit-content;
         position: sticky;
+    }
+
+    .carrito-biblioteca-cuenta img:nth-child(3){
+        display: block;
     }
 
 

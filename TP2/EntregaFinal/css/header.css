@@ -3,7 +3,7 @@
 header{
     max-width: 100%;
     top: 0;
-    position: sticky;
+    position: fixed;
     z-index: 400;
     background-color: var(--color-principal);
     height: fit-content;
@@ -173,6 +173,7 @@ nav ul li, div.nav ul li{
 @media only screen and (min-width: 768px) {
     header{
         height: fit-content;
+        position: sticky;
     }
 
 

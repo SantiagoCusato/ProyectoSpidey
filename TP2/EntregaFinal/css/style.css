@@ -25,3 +25,9 @@ body{
     min-width: 374px;
     overflow-x: hidden;
 }
+
+@media only screen and (min-width: 768px) {
+    body{
+        overflow-x: unset;
+    }
+}

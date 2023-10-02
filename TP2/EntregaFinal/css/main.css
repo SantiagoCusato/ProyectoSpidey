@@ -4,6 +4,7 @@ main{
     display: flex;
     flex-direction: column;
     padding: 30px 0px;
+    margin-top: 137px;
 }
 
 .titulo-1{
@@ -89,6 +90,10 @@ h1.nombre-juego{
 }
 
 @media only screen and (min-width: 768px) {
+
+    main{
+        margin-top: 0px;
+    }
     
     .promo-principal div.encabezado-promo{
         flex-direction: row;

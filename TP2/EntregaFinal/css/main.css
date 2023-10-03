@@ -58,7 +58,7 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: calc(100vw * 0.2643);
+    height: 451px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -97,6 +97,10 @@ h1.nombre-juego{
     main{
         margin-top: 0px;
     }
+
+    .promo-principal{
+        height: calc(100vw * 0.2643);
+    }
     
     .promo-principal div.encabezado-promo{
         flex-direction: row;
@@ -114,7 +118,7 @@ h1.nombre-juego{
         padding: 16px 40px;
     }
     
-
+    
     
 
     .piso{

@@ -40,12 +40,12 @@ header div.menu-container div div.menu-usuario{
     position: absolute;
     top: 125px;
     left: -60%;
-    transition: all 0.5s ease-in-out;
+    transition: all var(--tiempo-t-2) ease-in-out;
 }
 
 .menu-usuario{
     position: absolute;
-    transition: all 0.5s ease-in-out;
+    transition: all var(--tiempo-t-2) ease-in-out;
     height: max-content;
     max-height: none;
     overflow: hidden;

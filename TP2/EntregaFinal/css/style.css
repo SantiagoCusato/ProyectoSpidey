@@ -1,6 +1,7 @@
 :root {
     --color-principal: #FF9A48;
     --p-transparencia-1: #ff9a48cf;
+    --p-transparencia-8: #FF9A4810;
     --p-luz-1: #FFC99D;
     --p-sombra-1: #FF8827;
 
@@ -22,6 +23,9 @@
     --fuente-gratis: #7EFB32;
 
     --fondo-jugar: #4759FF;
+
+    --tiempo-t-1: 0.3s;
+    --tiempo-t-2: 0.5s;
 }
 
 .flex-row-center{

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded',function menuOn(){
     botonMenuCategorias.addEventListener("click", function(){
         if(menuUsuario.classList.contains("mostrar-menu-usuario")){
             menuUsuario.classList.toggle("mostrar-menu-usuario");
-
+            botonMenuUsuario.classList.toggle("cerrar-usuario");
         }else{
             main.classList.toggle("segundo-plano");
         }
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded',function menuOn(){
             main.classList.toggle("segundo-plano");
         }
         menuUsuario.classList.toggle("mostrar-menu-usuario");
-        
+        botonMenuUsuario.classList.toggle("cerrar-usuario");
         
     });
 });

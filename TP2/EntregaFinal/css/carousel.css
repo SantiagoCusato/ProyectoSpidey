@@ -53,18 +53,12 @@
   }
   
   #slider-container #slider .slide {
-    height: 90%;
+    /* height: 90%; */
     margin: auto 10px;
     background-color: #a847a4;
     box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
-    display: grid;
-    place-items: center;
   }
   
-  #slider-container #slider .slide span {
-    color: white;
-    font-size: 150px;
-  }
   
   @media only screen and (min-width: 1100px) {
   

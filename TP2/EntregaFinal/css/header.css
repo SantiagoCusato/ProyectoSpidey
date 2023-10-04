@@ -63,6 +63,45 @@ header div.menu-container div div.menu-usuario{
     margin: 0;
 }
 
+.btn-menu{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 30px;
+    justify-content: space-between;
+    transition: background-color var(--secundario-t-1);
+}
+
+
+
+.btn-menu div{
+    border-radius: 9999px;
+    width: 40px;
+    height: 5px;
+    margin: 0;
+    background-color: var(--negro);
+    
+}
+
+.line {
+    transition: 1s;
+}
+
+.active .line:nth-child(1) {
+    transform: translateY(13px) rotate(135deg);
+
+}
+
+.active .line:nth-child(2) {
+    transform: scale(0);
+}
+
+.active .line:nth-child(3) {
+    transform: translateY(-12px) translateX(0px) rotate(-135deg);
+
+}
+
+
 
 nav.nav ul, div.nav ul{
     list-style: none;

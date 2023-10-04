@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded',function menuOn(){
     botonMenuCategorias.addEventListener("click", function(){
         if(menuUsuario.classList.contains("mostrar-menu-usuario")){
             menuUsuario.classList.toggle("mostrar-menu-usuario");
+
         }else{
             main.classList.toggle("segundo-plano");
         }
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded',function menuOn(){
     botonMenuUsuario.addEventListener("click", function(){
         if(menuCategorias.classList.contains("mostrar-categorias")){
             menuCategorias.classList.toggle("mostrar-categorias");
+            botonMenuCategorias.classList.toggle("active");
         }else{
             main.classList.toggle("segundo-plano");
         }

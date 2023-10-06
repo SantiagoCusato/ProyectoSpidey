@@ -2,23 +2,23 @@
     height: fit-content;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 10px 0px;
     display: grid ;
     place-items: center
   }
   
   #slider-container {
     box-sizing: border-box;
-    height: 300px;
+    height: fit-content;
     width: 100%;
-    box-shadow: 5px 5px 8px gray inset;
     position: relative;
     overflow: hidden;
-    padding: 20px;
+    /* padding: 0px 20px 20px 20px; */
     margin: 1px;
   }
   
   #slider-container .btn {
+    z-index: 500;
     position: absolute;
     top: calc(50% - 30px);
     height: 30px;
@@ -37,7 +37,7 @@
   
   #slider-container .btn:first-of-type {
     transform: rotate(-45deg);
-    left: 10px
+    left: 8px
   }
   
   #slider-container .btn:last-of-type {
@@ -49,17 +49,26 @@
     display: flex;
     width: 1000%;
     height: 100%; 
-    transition: all .5s;
+    transition: all 2s;
+    padding-bottom: 10px;
   }
   
   #slider-container #slider .slide {
     /* height: 90%; */
     margin: auto 10px;
-    background-color: #a847a4;
-    box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+    transition: filter var(--tiempo-t-1), transform var(--tiempo-t-3);
+  }
+
+  #slider-container #slider:first-child{
+    margin: auto 10px auto 0px;
   }
   
-  
+  .mov-izquierda{
+    transform: skew(-15deg);
+  }
+  .mov-derecha{
+    transform: skew(15deg);
+  }
   @media only screen and (min-width: 1100px) {
   
     #slider-container #slider .slide {
@@ -77,7 +86,7 @@
   }
   
   @media only screen and (max-width: 900px) {
-  
+
     #slider-container #slider .slide {
       width: calc(5% - 20px);
     }

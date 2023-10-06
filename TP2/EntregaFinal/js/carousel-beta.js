@@ -1,22 +1,16 @@
 var container = document.getElementById('container')
 var slider = document.getElementById('slider');
-var slides = document.getElementsByClassName('slide');
-var slides2 = document.querySelectorAll('.slide');
-var cantidadSlides = slides.length;
+var slides = document.getElementsByClassName('slide').length;
 var buttons = document.getElementsByClassName('btn');
 
 
 var currentPosition = 0;
 var currentMargin = 0;
 var slidesPerPage = 0;
-var slidesCount = cantidadSlides - slidesPerPage;
+var slidesCount = slides - slidesPerPage;
 var containerWidth = container.offsetWidth;
 var prevKeyActive = false;
 var nextKeyActive = true;
-
-var rect = slides[1].getBoundingClientRect();
-var rect2 = slides[2].getBoundingClientRect();
-var cardLToCardL = rect2.x - rect.x;
 
 window.addEventListener("resize", checkWidth);
 
@@ -26,12 +20,20 @@ function checkWidth() {
 }
 
 function setParams(w) {
-    if (w < 768) {
+    if (w < 551) {
         slidesPerPage = 1;
     } else {
-        slidesPerPage=5;
+        if (w < 901) {
+            slidesPerPage = 2;
+        } else {
+            if (w < 1101) {
+                slidesPerPage = 3;
+            } else {
+                slidesPerPage = 4;
+            }
+        }
     }
-    slidesCount = cantidadSlides - slidesPerPage;
+    slidesCount = slides - slidesPerPage;
     if (currentPosition > slidesCount) {
         currentPosition -= slidesPerPage;
     };
@@ -52,17 +54,9 @@ setParams();
 
 function slideRight() {
     if (currentPosition != 0) {
-        Array.from(slides).forEach((element) => {
-            element.classList.toggle('mov-derecha');
-        });
-        slider.style.marginLeft = currentMargin + (90) + '%';
-        currentMargin += (90);
+        slider.style.marginLeft = currentMargin + (100 / slidesPerPage) + '%';
+        currentMargin += (100 / slidesPerPage);
         currentPosition--;
-        setTimeout(() => {
-            Array.from(slides).forEach((element) => {
-                element.classList.toggle('mov-derecha');
-            });
-          }, 1000);
     };
     if (currentPosition === 0) {
         buttons[0].classList.add('inactive');
@@ -73,26 +67,15 @@ function slideRight() {
 };
 
 function slideLeft() {
-    if (currentPosition <= 2) {
-        Array.from(slides).forEach((element) => {
-            element.classList.toggle('mov-izquierda');
-        });
-        slider.style.marginLeft = currentMargin - (90) + '%';
-        currentMargin -= (90);
+    if (currentPosition != slidesCount) {
+        slider.style.marginLeft = currentMargin - (100 / slidesPerPage) + '%';
+        currentMargin -= (100 / slidesPerPage);
         currentPosition++;
-
-        setTimeout(() => {
-            Array.from(slides).forEach((element) => {
-                element.classList.toggle('mov-izquierda');
-            });
-          }, 1000);
-        
     };
-    if (currentPosition == 3) {
+    if (currentPosition == slidesCount) {
         buttons[1].classList.add('inactive');
     }
     if (currentPosition > 0) {
         buttons[0].classList.remove('inactive');
     }
-    
 };

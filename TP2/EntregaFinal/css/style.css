@@ -27,6 +27,7 @@
     --tiempo-t-1: 0.3s;
     --tiempo-t-2: 0.5s;
     --tiempo-t-3: 1s;
+    --tiempo-t-4: 1.5s;
 }
 
 .flex-row-center{
@@ -51,7 +52,7 @@ body{
 
 .titulo-3{
     margin: 7px 0px;
-    filter: drop-shadow(var(--negro) 1px 4px  );
+    filter: drop-shadow(var(--negro) 1px 3px  );
 }
 
 .titulo-4{

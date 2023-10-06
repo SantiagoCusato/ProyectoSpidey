@@ -1,5 +1,3 @@
-"use strict";
-
 var container = document.getElementById('container')
 var slider = document.getElementById('slider');
 var slides = document.getElementsByClassName('slide');

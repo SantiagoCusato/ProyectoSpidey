@@ -26,7 +26,6 @@ aside{
 section{
     width: 100%;
     min-height: 500px;
-    background-color: rgba(3, 30, 240, 0.7);
 }
 
 .ver-mas-a{
@@ -37,7 +36,7 @@ section{
     border-radius: 15px;
     font-size: 20px;
     font-weight: bold;
-    border: solid 2px #FF006E;
+    border: solid 2px var(--a-sombra-1);
 }
 
 .ver-mas-a:hover{

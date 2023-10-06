@@ -50,13 +50,15 @@ function setParams(w) {
 
 setParams();
 
+var desplazamiento = 64;
+
 function slideRight() {
     if (currentPosition != 0) {
         Array.from(slides).forEach((element) => {
             element.classList.toggle('mov-derecha');
         });
-        slider.style.marginLeft = currentMargin + (90) + '%';
-        currentMargin += (90);
+        slider.style.marginLeft = currentMargin + (desplazamiento) + '%';
+        currentMargin += (desplazamiento);
         currentPosition--;
         setTimeout(() => {
             Array.from(slides).forEach((element) => {
@@ -65,10 +67,10 @@ function slideRight() {
           }, 1000);
     };
     if (currentPosition === 0) {
-        buttons[0].classList.add('inactive');
+        buttons[0].classList.add('flecha-out');
     }
     if (currentPosition < slidesCount) {
-        buttons[1].classList.remove('inactive');
+        buttons[1].classList.remove('flecha-out');
     }
 };
 
@@ -77,8 +79,8 @@ function slideLeft() {
         Array.from(slides).forEach((element) => {
             element.classList.toggle('mov-izquierda');
         });
-        slider.style.marginLeft = currentMargin - (90) + '%';
-        currentMargin -= (90);
+        slider.style.marginLeft = currentMargin - (desplazamiento) + '%';
+        currentMargin -= (desplazamiento);
         currentPosition++;
 
         setTimeout(() => {
@@ -86,13 +88,15 @@ function slideLeft() {
                 element.classList.toggle('mov-izquierda');
             });
           }, 1000);
+
+        
         
     };
     if (currentPosition == 3) {
-        buttons[1].classList.add('inactive');
+        buttons[1].classList.add('flecha-out');
     }
     if (currentPosition > 0) {
-        buttons[0].classList.remove('inactive');
+        buttons[0].classList.remove('flecha-out');
     }
     
 };

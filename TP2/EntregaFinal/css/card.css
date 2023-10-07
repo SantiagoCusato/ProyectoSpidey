@@ -5,11 +5,12 @@
         background-color: var(--color-secundario);
         display: flex;
         flex-direction: column;
-        transition: filter 0.1s ease-in-out;
+        transition: filter var(--tiempo-t-0) ease-in-out, transform var(--tiempo-t-2) ease-in-out;
     }
 
     .card:hover{
         filter: drop-shadow(var(--acento) 0px 8px  2px);
+        transform: scale(1.02);
     }
 
     div.card img{
@@ -39,7 +40,7 @@
         border-radius: 5px;
         padding: 3px 19px;
         font-size: 18.4px;
-        transition: background-color 0.5s;
+        transition: background-color var(--tiempo-t-2);
     }
 
     .precio{

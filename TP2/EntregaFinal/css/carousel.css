@@ -71,10 +71,7 @@
     filter: invert(100%) 
     drop-shadow(0px 0px 6px var(--a-sombra-1)) 
     drop-shadow(0px 0px 6px var(--a-sombra-1));
-  }
-
-  .flecha-izquierda {
-    transform: rotate(180deg);
+    transform: scale(1.2);
   }
   
 

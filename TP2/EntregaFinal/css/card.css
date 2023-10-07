@@ -6,11 +6,13 @@
         display: flex;
         flex-direction: column;
         transition: filter var(--tiempo-t-0) ease-in-out, transform var(--tiempo-t-2) ease-in-out;
+        
     }
 
     .card:hover{
         filter: drop-shadow(var(--acento) 0px 8px  2px);
         transform: scale(1.02);
+        cursor:pointer;
     }
 
     div.card img{
@@ -54,7 +56,7 @@
     }
 
     .agregar-juego{
-        background-color: var(--acento);
+        background-color: var(--fondo-gratis);
     }
 
     .agregar-juego:hover{

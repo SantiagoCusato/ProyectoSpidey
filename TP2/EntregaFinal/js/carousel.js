@@ -14,6 +14,8 @@ var containerWidth = container.offsetWidth;
 var prevKeyActive = false;
 var nextKeyActive = true;
 
+let movPorcentual = 0;
+
 var rect = slides[1].getBoundingClientRect();
 var rect2 = slides[2].getBoundingClientRect();
 var cardLToCardL = rect2.x - rect.x;
@@ -28,8 +30,10 @@ function checkWidth() {
 function setParams(w) {
     if (w < 768) {
         slidesPerPage = 1;
+        movPorcentual = 100;
     } else {
         slidesPerPage=5;
+        movPorcentual = 64;
     }
     slidesCount = cantidadSlides - slidesPerPage;
     if (currentPosition > slidesCount) {
@@ -50,15 +54,14 @@ function setParams(w) {
 
 setParams();
 
-var desplazamiento = 64;
 
 function slideRight() {
     if (currentPosition != 0) {
         Array.from(slides).forEach((element) => {
             element.classList.toggle('mov-derecha');
         });
-        slider.style.marginLeft = currentMargin + (desplazamiento) + '%';
-        currentMargin += (desplazamiento);
+        slider.style.marginLeft = currentMargin + (movPorcentual) + '%';
+        currentMargin += (movPorcentual);
         currentPosition--;
         setTimeout(() => {
             Array.from(slides).forEach((element) => {
@@ -79,8 +82,8 @@ function slideLeft() {
         Array.from(slides).forEach((element) => {
             element.classList.toggle('mov-izquierda');
         });
-        slider.style.marginLeft = currentMargin - (desplazamiento) + '%';
-        currentMargin -= (desplazamiento);
+        slider.style.marginLeft = currentMargin - (movPorcentual) + '%';
+        currentMargin -= (movPorcentual);
         currentPosition++;
 
         setTimeout(() => {

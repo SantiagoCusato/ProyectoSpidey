@@ -135,15 +135,7 @@ nav ul li a, div.nav ul li a{
     color: var(--negro);
 }
 
-nav ul li:hover, div.nav ul li:hover{
-    color: var(--color-principal);
-    background-color: var(--color-secundario);
-}
 
-nav ul li:hover *, div.nav ul li:hover *{
-    color: var(--color-principal);
-    background-color: var(--color-secundario);
-}
 nav ul li *, div.nav ul li *{
     display: inline-block;
 }
@@ -233,17 +225,7 @@ div#panel-der img{
     cursor: pointer;
 }
 
-div#panel-der img:hover{
-    filter: invert(100%) 
-    drop-shadow(0px 0px 6px var(--fondo-jugar)) 
-    drop-shadow(0px 0px 6px var(--fondo-jugar));
-}
 
-.btn-menu:hover > div{
-    filter: invert(100%) 
-    drop-shadow(0px 0px 6px var(--fondo-jugar)) 
-    drop-shadow(0px 0px 6px var(--fondo-jugar));
-}
 
 div.logo img{
     margin-right: 5px;
@@ -269,10 +251,33 @@ div.logo a *{
     transition: filter var(--tiempo-t-1) ease-in-out;
 }
 
-div.logo a:hover > *{
+
+div#panel-der img:active{
+    filter: invert(100%) 
+    drop-shadow(0px 0px 6px var(--fondo-jugar)) 
+    drop-shadow(0px 0px 6px var(--fondo-jugar));
+}
+
+.btn-menu:active > div{
+    filter: invert(100%) 
+    drop-shadow(0px 0px 6px var(--fondo-jugar)) 
+    drop-shadow(0px 0px 6px var(--fondo-jugar));
+}
+
+div.logo a:active > *{
     filter: invert(100%) 
     drop-shadow(0px 0px 6px var(--a-sombra-1)) 
     drop-shadow(0px 0px 6px var(--a-sombra-1));
+}
+
+nav ul li:active, div.nav ul li:active{
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+}
+
+nav ul li:active *, div.nav ul li:active *{
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
 }
 
 
@@ -314,5 +319,33 @@ div.logo a:hover > *{
     #b-busqueda{
         order: 2;
         max-width: 50%;
+    }
+
+    div#panel-der img:hover{
+        filter: invert(100%) 
+        drop-shadow(0px 0px 6px var(--fondo-jugar)) 
+        drop-shadow(0px 0px 6px var(--fondo-jugar));
+    }
+    
+    .btn-menu:hover > div{
+        filter: invert(100%) 
+        drop-shadow(0px 0px 6px var(--fondo-jugar)) 
+        drop-shadow(0px 0px 6px var(--fondo-jugar));
+    }
+
+    div.logo a:hover > *{
+        filter: invert(100%) 
+        drop-shadow(0px 0px 6px var(--a-sombra-1)) 
+        drop-shadow(0px 0px 6px var(--a-sombra-1));
+    }
+
+    nav ul li:hover, div.nav ul li:hover{
+        color: var(--color-principal);
+        background-color: var(--color-secundario);
+    }
+    
+    nav ul li:hover *, div.nav ul li:hover *{
+        color: var(--color-principal);
+        background-color: var(--color-secundario);
     }
 }

@@ -65,6 +65,7 @@
     margin: auto 0px;
     z-index: 1;
     transition: all var(--tiempo-t-2) ease-in-out;
+    cursor: pointer;
   }
 
   .flecha:hover{

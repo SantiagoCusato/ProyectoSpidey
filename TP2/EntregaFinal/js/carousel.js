@@ -5,7 +5,6 @@ var slides2 = document.querySelectorAll('.slide');
 var cantidadSlides = slides.length;
 var buttons = document.getElementsByClassName('btn');
 
-
 var currentPosition = 0;
 var currentMargin = 0;
 var slidesPerPage = 0;
@@ -25,10 +24,13 @@ window.addEventListener("resize", checkWidth);
 
 function checkWidth() {
     containerWidth = container.offsetWidth;
-    setParams(containerWidth);
+    setParams(screen.width);
 }
 
 function setParams(w) {
+    if(typeof w === 'undefined'){
+        w=screen.width;
+    }
     if (w < 768) {
         slidesPerPage = 1;
         movPorcentual = 100;
@@ -81,7 +83,7 @@ function slideRight() {
 };
 
 function slideLeft() {
-    if (currentPosition <= steps-1) {
+    if (currentPosition < steps) {
         Array.from(slides).forEach((element) => {
             element.classList.toggle('mov-izquierda');
         });

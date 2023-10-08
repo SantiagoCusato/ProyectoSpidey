@@ -30,8 +30,10 @@
     --tiempo-t-2: 0.5s;
     --tiempo-t-3: 1s;
     --tiempo-t-4: 1.5s;
-}
 
+    --ancho-mobile: 830px;
+}
+/* 768px */
 .flex-row-center{
     display: flex;
     flex-direction: row;

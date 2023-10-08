@@ -24,10 +24,7 @@
     height: 100%; 
     transition: all 2s;
     padding-bottom: 10px;
-  }
-
-  #slider-container #slider div:nth-child(1){
-    margin-left: 0;
+    overflow-x: scroll;
   }
   
   #slider-container #slider .slide {
@@ -36,9 +33,6 @@
     transition: filter var(--tiempo-t-1), transform var(--tiempo-t-3);
   }
 
-  #slider-container #slider:first-child{
-    margin: auto 10px auto 0px;
-  }
   
   .mov-izquierda{
     transform: skew(-15deg);
@@ -66,6 +60,7 @@
     z-index: 1;
     transition: all var(--tiempo-t-2) ease-in-out;
     cursor: pointer;
+    display: none;
   }
 
   .flecha:hover{
@@ -80,7 +75,16 @@
     opacity: 0;
   }
 
+
   @media only screen and (min-width: 768px) {
+    #slider-container #slider div:nth-child(1){
+      margin-left: 0px;
+    }
+
+    #slider-container #slider{
+      overflow-x: unset;
+    }
+
     
   }
 

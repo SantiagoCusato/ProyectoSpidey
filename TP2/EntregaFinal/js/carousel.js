@@ -33,7 +33,8 @@ function setParams(w) {
     }
     if (w < 768) {
         slidesPerPage = 1;
-        movPorcentual = 100;
+        //100.8
+        movPorcentual = 100.8;
         steps = 14;
     } else {
         slidesPerPage=5;

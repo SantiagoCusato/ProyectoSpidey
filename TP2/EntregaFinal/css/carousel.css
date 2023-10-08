@@ -9,7 +9,7 @@
     box-sizing: border-box;
     height: fit-content;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
     /* padding: 0px 20px 20px 20px; */
     margin: 1px;
   }
@@ -20,7 +20,7 @@
 
   #slider-container #slider {
     display: flex;
-    width: 1000%;
+    width: fit-content;
     height: 100%; 
     transition: all 2s;
     padding-bottom: 10px;
@@ -77,14 +77,28 @@
 
 
   @media only screen and (min-width: 768px) {
+
+    .flecha{
+      display: block;
+    }
+
     #slider-container #slider div:nth-child(1){
       margin-left: 0px;
     }
 
     #slider-container #slider{
       overflow-x: unset;
+      width: 1000%;
     }
 
+    #slider-container {
+      overflow: hidden;
+    }
+
+    #slider-container #slider {
+      width: 1000%;
+      overflow-x: hidden;
+    }
     
   }
 

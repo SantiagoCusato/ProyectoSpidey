@@ -304,6 +304,10 @@ nav ul li:active *, div.nav ul li:active *{
         margin-top: 0;
     }
 
+    .menu-usuario #biblioteca{
+        display: none;
+    }
+
 
     div.menu-container{
         flex-direction: row;

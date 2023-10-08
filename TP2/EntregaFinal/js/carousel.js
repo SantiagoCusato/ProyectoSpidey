@@ -15,6 +15,7 @@ var prevKeyActive = false;
 var nextKeyActive = true;
 
 let movPorcentual = 0;
+let steps = 0;
 
 var rect = slides[1].getBoundingClientRect();
 var rect2 = slides[2].getBoundingClientRect();
@@ -31,9 +32,11 @@ function setParams(w) {
     if (w < 768) {
         slidesPerPage = 1;
         movPorcentual = 100;
+        steps = 14;
     } else {
         slidesPerPage=5;
         movPorcentual = 64;
+        steps = 3;
     }
     slidesCount = cantidadSlides - slidesPerPage;
     if (currentPosition > slidesCount) {
@@ -78,7 +81,7 @@ function slideRight() {
 };
 
 function slideLeft() {
-    if (currentPosition <= 2) {
+    if (currentPosition <= steps-1) {
         Array.from(slides).forEach((element) => {
             element.classList.toggle('mov-izquierda');
         });
@@ -95,7 +98,7 @@ function slideLeft() {
         
         
     };
-    if (currentPosition == 3) {
+    if (currentPosition == steps) {
         buttons[1].classList.add('flecha-out');
     }
     if (currentPosition > 0) {

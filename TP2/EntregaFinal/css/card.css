@@ -81,6 +81,10 @@ div.card div.estado-juego span.agregar-juego{
     background-color: var(--acento);
 }
 
+div.card div.estado-juego span.span-out{
+    display: none;
+}
+
 @media only screen and (min-width: 768px) {
     .agregar-juego:hover{
         background-color: var(--a-sombra-1);

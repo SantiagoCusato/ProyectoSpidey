@@ -151,8 +151,12 @@ h1.nombre-juego{
         background-color: var(--secundario-t-1);
     }
 
-    aside div.juego-max-estadistica{
+    aside .juego-max-estadistica{
         margin-bottom: 40px;
+    }
+
+    aside .juego-max-estadistica:last-of-type{
+        margin-bottom: 15px;
     }
 
     aside:last-child{

@@ -16,7 +16,10 @@
   }
   
   .container h3{
-    margin-left: 30px;
+    
+    margin: 7px 0px 6px 0px;
+    margin-left: 35px;
+    border-bottom: 2px solid var(--color-secundario);
   }
 
   .slider-container .slider {
@@ -106,6 +109,7 @@
     }
 
     .slider-container .slider .slide {
+      min-width: 0px;
       width: calc(1.9% - 24px);
     }
     

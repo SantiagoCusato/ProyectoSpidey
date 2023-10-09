@@ -77,7 +77,7 @@
   }
 
   .slider-container .slider .slide {
-    width: calc(5% - 15px);
+    min-width: 230px;
   }
 
 

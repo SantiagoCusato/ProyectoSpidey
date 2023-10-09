@@ -31,6 +31,8 @@
     --tiempo-t-3: 1s;
     --tiempo-t-4: 1.5s;
 
+    --tiempo-carga: 5s;
+
     --ancho-mobile: 830px;
 }
 /* 768px */
@@ -64,34 +66,7 @@ body{
     margin: 0;
 }
 
-#spinner{
-    opacity: 1;
-    animation: spin 1.5s infinite linear ;
-}
 
-@keyframes spin {
-    0% {
-        transform:rotate(0deg);
-    }
-
-
-    40%{
-        transform:rotate(340deg);
-        opacity: 0.5;
-    }
-
-    100% {
-        transform:rotate(360deg);
-    }
-}
-
-.cargando-container{
-    width: fit-content;
-}
-
-.cargando-container h4{
-    text-align: center;
-}
 
 
 

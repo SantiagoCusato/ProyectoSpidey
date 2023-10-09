@@ -1,3 +1,5 @@
+@import "style.css";
+
 #spinner{
     opacity: 1;
     animation: spin 1.5s infinite linear ;
@@ -37,7 +39,7 @@
 }
 .progress .color{
     position: absolute;
-    background-color: #ffffff;
+    background-color: var(--color-secundario);
     width: 0px;
     height: 10px;
     border-radius: 15px;

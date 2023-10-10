@@ -118,6 +118,8 @@ textarea:focus, input:focus{
     
 }
 .Enviar{
+    cursor: pointer;
+    font-family: Roboto;
     margin: 10px auto;  
     color: var(--fuente-clara);
     width: 305px;
@@ -164,6 +166,7 @@ textarea:focus, input:focus{
 
 }
 .carteles * {
+    text-decoration: none;
     text-align: center;
 }
 .link{

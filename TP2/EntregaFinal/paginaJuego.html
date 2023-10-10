@@ -1,16 +1,22 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Rokkitt|Trirong">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/paginaJuego.css">
+    <link rel="icon" href="img/shurikenLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Rokkitt|Trirong">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7e53c9d9a2.js" crossorigin="anonymous"></script>
     <title>Shuriken</title>
 </head>
 <body>
@@ -25,37 +31,39 @@
                 </div>
                 <nav class="nav categorias" title="nav">
                     <ul class="nav-ul">
-                        <li><i class="fas fa-gifts" aria-hidden="true"></i><a href="#">Gratis</a></li>
-                        <li><i class="fas fa-clock" aria-hidden="true"></i><a href="#">Anticipados</a></li>
-                        <li><i class="fas fa-crosshairs" aria-hidden="true"></i><a href="#">Accion</a></li>
-                        <li><i class="fas fa-mountain" aria-hidden="true"></i><a href="#">Aventura</a></li>
-                        <li><i class="fas fa-flag-checkered" aria-hidden="true"></i><a href="#">Carreras</a></li>
-                        <li><i class="fas fa-star" aria-hidden="true"></i><a href="#">Casual</a></li>
-                        <li><i class="fas fa-futbol" aria-hidden="true"></i><a href="#">Deportes</a></li>
-                        <li><i class="fas fa-chess-knight" aria-hidden="true"></i><a href="#">Estrategia</a></li>
-                        <li><i class="fas fa-puzzle-piece" aria-hidden="true"></i><a href="#">Indie</a></li>
-                        <li><i class="fas fa-user-plus" aria-hidden="true"></i><a href="#">Multiplayer</a></li>
-                        <li><i class="fas fa-plane" aria-hidden="true"></i><a href="#">Simulador</a></li>
-                        <li><i class="fas fa-hat-wizard" aria-hidden="true"></i><a href="#">Rol</a></li>
+                        <li><i class="fas fa-gifts"></i><a href="#">Gratis</a></li>
+                        <li><i class="fas fa-clock"></i><a href="#">Anticipados</a></li>
+                        <li><i class="fas fa-crosshairs"></i><a href="#">Accion</a></li>
+                        <li><i class="fas fa-mountain"></i><a href="#">Aventura</a></li>
+                        <li><i class="fas fa-flag-checkered"></i><a href="#">Carreras</a></li>
+                        <li><i class="fas fa-star"></i><a href="#">Casual</a></li>
+                        <li><i class="fas fa-futbol"></i><a href="#">Deportes</a></li>
+                        <li><i class="fas fa-chess-knight"></i><a href="#">Estrategia</a></li>
+                        <li><i class="fas fa-puzzle-piece"></i><a href="#">Indie</a></li>
+                        <li><i class="fas fa-user-plus"></i><a href="#">Multiplayer</a></li>
+                        <li><i class="fas fa-plane"></i><a href="#">Simulador</a></li>
+                        <li><i class="fas fa-hat-wizard"></i><a href="#">Rol</a></li>
                     </ul>
                 </nav>
                 <div class="logo flex-row-center">
-                    <img src="img/shurikenLogo.png" alt="logoShuriken">
-                    <h1>Shuriken</h1>
+                    <a href="https://ramitafcex.github.io/InterfacesDeUsuario.github.io/TP2/EntregaFinal/cargando.html" id="homebtn">
+                        <img src="img/shurikenLogo.png" alt="logoShuriken">
+                        <h1>Shuriken</h1>
+                    </a>
                 </div>
             </div>
 
             <div id="panel-der" class="carrito-biblioteca-cuenta flex-row-center">
                 <div class="nav menu-usuario">
                     <ul class="nav-ul nav-usuario">
-                        <li><i class="fas fa-user" aria-hidden="true"></i><a href="#">Mi Perfil</a></li>
-                        <li><i class="fas fa-file-contract" aria-hidden="true"></i><a href="#">Detalles</a></li>
-                        <li><i class="fas fa-wallet" aria-hidden="true"></i><a href="#">Cartera</a></li>
-                        <li><i class="fas fa-wrench" aria-hidden="true"></i><a href="#">Preferencias</a></li>
-                        <li><i class="fas fa-question" aria-hidden="true"></i><a href="#">Ayuda</a></li>
-                        <li><i class="fas fa-headset" aria-hidden="true"></i><a href="#">Soporte</a></li>
-                        <li><i class="fas fa-door-open" aria-hidden="true"></i><a href="#">Cerrar
-                                Sesión</a></li>
+                        <li><a href="#"><i class="fas fa-user"></i>Mi Perfil</a></li>
+                        <li id="biblioteca"><a href="#"><i class="fas fa-book"></i>Bibilioteca</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i>Detalles</a></li>
+                        <li><a href="#"><i class="fas fa-wallet"></i>Cartera</a></li>
+                        <li><a href="#"><i class="fas fa-wrench"></i>Preferencias</a></li>
+                        <li><a href="#"><i class="fas fa-question"></i>Ayuda</a></li>
+                        <li><a href="#"><i class="fas fa-headset"></i>Soporte</a></li>
+                        <li><a href="https://ramitafcex.github.io/InterfacesDeUsuario.github.io/TP2/EntregaFinal/index.html"><i class="fas fa-door-open"></i>Cerrar Sesión</a></li>
                     </ul>
                 </div>
                 <img src="img/carrito.png" alt="btn-carrito">
@@ -63,15 +71,17 @@
                 <div>
                     <img class="btn-usuario" src="img/user.png" alt="btn-usuario">
                 </div>
-
+                
             </div>
 
             <div id="b-busqueda" class="barra-busqueda flex-row-center">
-                <input type="text" placeholder="Buscar">
-                <img src="img/buscar.png" alt="icono-buscar">
+                <form action="">
+                    <input type="text" placeholder="Buscar">
+                    <img src="img/buscar.png" alt="icono-buscar">
+                </form>
             </div>
         </div>
-    </header>
+</header>
     <div class="migas">Home>>Gratis>>GODZILLAvsKONG</div>
     <div class="contenedorTitulo">
         <img class="imagenVS" src="img/Godzilla_vs 2.png" alt="">
@@ -399,8 +409,8 @@
 </footer>
 
     
-        <script src="js/header.js" type="text/javascript"></script>
-        <script src="js/carousel.js" type="text/javascript"></script>
+<script src="js/header.js" type="text/javascript"></script>
+<script src="js/card.js" type="text/javascript"></script>
 
     
 </body>

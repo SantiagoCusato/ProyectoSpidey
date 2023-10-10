@@ -193,6 +193,7 @@ div.piso-dos{
     }
 
     div.card-2{
+        min-width: 27%;
         max-width: 27%;
         height: calc(27% * 1.2);
         position: relative;

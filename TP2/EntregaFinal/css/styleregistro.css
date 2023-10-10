@@ -172,6 +172,7 @@
 }
 
 .contenedorShuriken{
+    cursor: pointer;
     font-family: Roboto;
     font-size: 20px;
     margin: 6px;
@@ -220,7 +221,7 @@ textarea:focus, input:focus{
 }
 .Enviar{
     color: var(--fuente-clara);
-    
+    cursor: pointer;
     margin: 10px;  
     width: 305px;
     height: 53px;

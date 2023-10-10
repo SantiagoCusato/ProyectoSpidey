@@ -179,8 +179,14 @@ div.piso-dos{
         background-color: var(--secundario-t-1);
         border-radius: 20px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    section.area-zoom .titulo-1{
+        margin-top: 0;
+        font-size: 3rem;
     }
 
     .destacados-container{
@@ -213,7 +219,11 @@ div.piso-dos{
         position: absolute;
         bottom: 2%;
         z-index: 500;
-        right: 15%;
+        width: fit-content;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 

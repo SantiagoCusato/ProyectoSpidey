@@ -1,4 +1,5 @@
-
+footer{display: none;}
+@media only screen and (min-width: 768px) {
 :root {
     --color-principal: rgb(255, 154, 72);
     --p-transparencia-1: #ff9a48cf;
@@ -32,32 +33,24 @@
     --tiempo-t-4: 1.5s;
 }
 .footer {
+    display: block;
     width: 100%;
-    height: 37%;
-    position: absolute;
+    height:45%;
     background-color: var(--Principal, #FF9A48);
-    border-width: 1px;
+    border: 1px;
     border-style: solid;
     border-color: rgb(0, 0, 0);
-    border-image: initial;
 }
-.contenedorLogo {
+.contenedorColumna{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 224px;
-    height: 56.57px;
-    left: 780px;
-    top: 0px;
-    position: absolute;
-    background-color: var(--Principal, #FF9A48);
-    place-items: center;
 }
 .logoFooter {
     display: flex;
     justify-content: center;
     width: 148.98px;
-    left: 75.02px;
-    top: 10px;
+    top: 1%;
     color: black;
     font-size: 37px;
     font-family: Rokkitt;
@@ -74,11 +67,10 @@
     height: 95px;
     left: 358px;
     top: 135px;
-    position: absolute;
     margin: 10px;
 }
 .contacto {
-    position: absolute;
+   
     color: black;
     font-weight: bold;
     font-size: 25px;
@@ -92,7 +84,7 @@
     height: 17px;
     left: 0px;
     top: 31px;
-    position: absolute;
+    
     color: black;
     font-size: 20px;
     font-family: Roboto;
@@ -101,7 +93,6 @@
 .email{
     left: 0px;
     top: 49px;
-    position: absolute;
     color: black;
     font-size: 20px;
     font-family: Roboto;
@@ -109,17 +100,9 @@
 .direccion {
     left: 0px;
     top: 74px;
-    position: absolute;
     color: black;
     font-size: 20px;
     font-family: Roboto;
-}
-.contenedorInformacion {
-    width: 95%;
-    height: 60px;
-    left: 4%;
-    top: 19%;
-    position: absolute;
 }
 .parrafoFooter {
     color: black;
@@ -136,12 +119,11 @@
     height: 121px;
     left: 1040px;
     top: 153px;
-    position: absolute;
+    
 }
 .redesSociales {
     width: 181.33px;
     top: 0px;
-    position: absolute;
     color: black;
     font-size: 22px;
     font-family: Roboto;
@@ -149,7 +131,6 @@
 }
 .instagramShuriken {
     display: flex;
-    position: relative;
     width: 140px;
     margin: 1%;
     top: 3px;
@@ -160,12 +141,14 @@
 }
 .contenedorAcerca {
     width: 100%;
-    height: 56px;
-    top: 311px;
+    height: 10%;
+    margin-top: 21%;
     right: 2%;
     font-size: 25px;
-    position: absolute;
     justify-content: center;
     align-items: center;
     display: inline-flex;
+}
+
+    
 }

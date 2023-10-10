@@ -181,6 +181,14 @@
     margin: 4%;
 
 }
+
+.cards .slide{
+    margin: 0 auto;
+}
+
+.cards .cardtop{
+    margin-bottom: 20px;
+}
 .reseñasRecientes{
     display: flex;
 }

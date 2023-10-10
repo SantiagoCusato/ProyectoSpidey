@@ -35,6 +35,7 @@
 
     --ancho-mobile: 830px;
 }
+
 /* 768px */
 .flex-row-center{
     display: flex;
@@ -42,9 +43,11 @@
     align-items: center;
 }
 
+
+
 body{
     width: 100%;
-    max-width: 100%;
+    max-width: 100vw;
     background-color: var(--p-sombra-1);
     font-family: Roboto;
     height: 1800px;

@@ -16,7 +16,6 @@
   }
   
   .container h3{
-    
     margin: 7px 0px 6px 0px;
     margin-left: 35px;
     border-bottom: 2px solid var(--color-secundario);
@@ -33,9 +32,16 @@
   
   .slider-container .slider .slide {
     /* height: 90%; */
+    min-width: 320px;
+    height: 220px;
     margin: auto 10px;
     transition: filter var(--tiempo-t-1), transform var(--tiempo-t-3);
   }
+
+  .slider-container .slider .slide img{
+    height: 160px;
+  }
+
 
   
   .mov-izquierda{
@@ -112,6 +118,10 @@
       min-width: 0px;
       width: calc(15vw - 24px);
       height: calc((15vw - 24px) * 1.1751);
+    }
+
+    .slider-container .slider .slide img{
+      height: auto;
     }
 
 

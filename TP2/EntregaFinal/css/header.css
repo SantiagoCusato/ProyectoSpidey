@@ -52,6 +52,7 @@ header div.menu-container div div.menu-usuario{
     overflow: hidden;
     right: -60%;
     top: 125px;
+    /* display: none; */
 }
 
 

@@ -1,8 +1,9 @@
 @import "style.css";
 
 header{
-    min-width: 310px;
-    max-width: 100%;
+    /* min-width: 310px; */
+    box-sizing: border-box;
+    max-width: 100vw;
     top: 0;
     position: fixed;
     z-index: 400;

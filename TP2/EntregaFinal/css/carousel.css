@@ -110,8 +110,11 @@
 
     .slider-container .slider .slide {
       min-width: 0px;
-      width: calc(1.9% - 24px);
+      width: calc(15vw - 24px);
+      height: calc((15vw - 24px) * 1.1751);
     }
+
+
     
   }
 

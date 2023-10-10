@@ -14,14 +14,13 @@ div.card{
 
 div.card img{
     object-fit: cover;
-    height: 11.5rem;
+    height: inherit;
     width: 100%;
 }
 
 div.card h4{
     background-color: var(--s-sombra-1);
     text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
     padding-left: 4px;
 }
@@ -97,5 +96,21 @@ div.card div.estado-juego span.span-out{
     .jugar:hover{
         background-color: var(--acento);
     }
+
+    .slide {
+        min-width: 0px;
+        width: calc(15vw - 24px);
+        height: calc((15vw - 24px) * 1.1751);
+        max-width: 97%;
+    }
+
+    .slide img{
+        height: inherit;
+    }
+
+    .slide h4{
+        padding: 1px 0px;
+    }
+    
 
 }

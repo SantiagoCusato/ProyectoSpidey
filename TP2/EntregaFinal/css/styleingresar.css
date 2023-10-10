@@ -40,6 +40,9 @@ body  {
 .ingreso{
     display:flex;
     flex-direction: column;
+    border: 1px;
+    border-radius: 15px;
+    align-items: center;
     margin: 40px;
     width: 410px;
     height: 1018px;
@@ -82,9 +85,18 @@ body  {
     place-items: center;
     justify-content: center;
     font-family: Roboto;
-    color: var(--fuente-clara)
+    color: var(--fuente-clara);
+    font-size:20px;
+}
+textarea:focus, input:focus{
+    outline: none;
+    background-color: var(--p-luz-1);
+    color:var(--fuente-oscura)
 }
 .input {
+    text-transform: uppercase;
+    color: var(--fuente-clara);
+    font-family: Roboto;
     display: grid;
     place-items: center;
     justify-content: center;
@@ -92,7 +104,7 @@ body  {
     width: 305px; 
     height: 15px;
     padding: 15px; 
-    left: 27px;  
+    margin-bottom: 30px;  
     position: relative; 
     background-color: #eb7d22; 
     border-radius: 10px;   
@@ -100,11 +112,15 @@ body  {
     
 }
 .captcha{
-    width: 345;
+    width: 345px;
     height: 86px;
+    margin-left: 1%;
+    
 }
 .Enviar{
-    margin: 10px;  
+    margin: 10px auto;  
+    color: var(--fuente-clara);
+    width: 305px;
     height: 53px;
     padding: 15px; 
     background: #FF8827; 
@@ -112,21 +128,16 @@ body  {
     border-radius: 50px; 
     justify-content: center; 
     align-items: center; 
-    gap: 15px; 
     display: flex;
-    color: #6A4536;
     font-size: 20px;
     font-weight: 500;
    
 }
 .linea{
-    display: grid;
-    place-items: center;
-    justify-content: center;
-    border-bottom:1px solid;
+    margin: 15px 0px;
+    border-bottom:3px solid;
     color: #eb7d22;
-    width: 300px;
-    
+    width: 85%;
 }
 .olvidado, .atras {
     justify-content: center;
@@ -149,5 +160,13 @@ body  {
     padding: 3px;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+
+}
+.carteles * {
+    text-align: center;
+}
+.link{
+    text-decoration: none;
 
 }

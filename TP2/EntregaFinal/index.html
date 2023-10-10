@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Rokkitt|Trirong">
     <link rel="stylesheet" href="css/styleregistro.css">
     <title>Document</title>
@@ -13,47 +12,50 @@
 
 <body>
     <section class="registro">
-        <section class="fondoRegistro">
+        <form class="fondoRegistro">
              <div class="tablaRegistro">
                <h1 class="logo" ><img class="Shuriken" src="img/shurikenLogo.png" alt="">Shuriken</h1>
                  <div class="contenedorSesion">
                    <h2 class="inicio">Iniciar Sesion</h2>
                       <button class="fondoFace"><img class="logos" src="img/facebookLogo.png" alt="logoShuriken">Continuar con Facebook</button>
                       <button class="contenedorGmail"><img class="logos" src="img/GoogleLogo.png" alt="logoShuriken">Continuar con Google </button>
-                      <button class="contenedorShuriken"><img class="logos" src="img/shurikenLogo.png" alt="logoShuriken">Tengo Cuenta </button>
+                      <a  class="link" href="https://ramitafcex.github.io/InterfacesDeUsuario.github.io/TP2/EntregaFinal/ingresar.html">
+                      <button type="button"  class="contenedorShuriken"><img class="logos" src="img/shurikenLogo.png" alt="logoShuriken">Tengo Cuenta </button>
+                      </a>
                  </div>
                  <div class="contenedorCrear">
                      <h3 class="crearCuenta">Crea tu cuenta</h3>
                  </div>
                  <div class="contenedorInput">
                     <label for="" class="label">      Nombre y apellido</label>
-                    <input class="input">
+                    <input class="input" >
                  </div>
                  <div class="contenedorInput">
                     <label for="" class="label">      Nickname</label>
-                    <input class="input">
+                    <input class="input" >
                  </div>
                  <div class="contenedorInput">
                     <label for="" class="label">      Fecha de nacimiento</label>
-                    <input type="date" class="input">
+                    <input type="date" class="input" >
                  </div>
                  <div class="contenedorInput">
                     <label for="" class="label">      Email</label>
-                    <input type="email"  class="input">
+                    <input type="email"  class="input" >
                  </div>
                  <div class="contenedorInput">
                     <label for="" class="label">      Contraseña</label>
-                    <input  class="input">
+                    <input  class="input" >
                  </div>
                  <div class="contenedorInput">
                     <label for="" class="label">      Confirmar contraseña</label>
-                    <input  class="input">
+                    <input  class="input" >
                  </div>
                  <img src="img/recaptcha.png" class="captcha"/>
-
-                    <button type="submit" class="Enviar">Enviar</button>
+                   <a class="link"href="https://ramitafcex.github.io/InterfacesDeUsuario.github.io/TP2/EntregaFinal/cargando.html">
+                    <button type="button" class="Enviar">Registrarse</button>
+                  </a>
              </div>
-      </section>
+        </form>
    </section>
 </body>
 

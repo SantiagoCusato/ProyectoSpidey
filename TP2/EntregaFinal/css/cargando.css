@@ -34,12 +34,12 @@
     position: relative;
     height: 10px;
     width: 100%;
-    border: 10px solid #f4a261;
+    border: 10px solid var(--color-secundario);
     border-radius: 15px;
 }
 .progress .color{
     position: absolute;
-    background-color: var(--color-secundario);
+    background-color: var(--fuente-clara);
     width: 0px;
     height: 10px;
     border-radius: 15px;

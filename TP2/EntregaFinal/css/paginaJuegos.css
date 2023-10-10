@@ -1,0 +1,306 @@
+:root {
+    --color-principal: rgb(255, 154, 72);
+    --p-transparencia-1: #ff9a48cf;
+    --p-transparencia-8: #FF9A4810;
+    --p-luz-1: hsl(27, 100%, 81%);
+    --p-sombra-1: #FF8827;
+
+
+    --color-secundario: rgb(105, 68, 53);
+    --s-luz-1: #784E3D;
+    --s-sombra-1: #38241D;
+    --secundario-t-1: rgba(106, 69, 54, 0.37);
+
+    --acento: #FB4091;
+    --a-sombra-1: #FF006E;
+    --a-transparencia-1: rgba(251, 64, 145, 1);
+
+
+    --negro: #000;
+    --fuente-oscura: #272727;
+    --fuente-clara: #f0ece4;
+
+    --fondo-gratis: #6DBC3C;
+    --fuente-gratis: #7EFB32;
+
+    --fondo-jugar: #4759FF;
+
+    --tiempo-t-1: 0.3s;
+    --tiempo-t-2: 0.5s;
+    --tiempo-t-3: 1s;
+    --tiempo-t-4: 1.5s;
+}
+
+.migas, .contenedorTitulo{
+    margin-left: 4%;
+}
+.Comentarios{
+    justify-content: center;
+    margin-top: 0%;
+    width: 460px;
+    height: 116px;
+
+}
+.contenedoresJuegos{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    height: 1360px; 
+    margin-top: 0; 
+    
+   
+}
+.superior{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    
+    margin: 2%;
+}
+
+.contenedorTitulo {
+  display: flex;
+  justify-content: flex-start;
+  left: 5%;
+}
+
+.imagenVS{
+    width: 372px;
+    height: 77px;
+}
+.contenedorJuego{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: black;
+    width: 1650px;
+    height: 644px;
+    margin-left: 4%;
+}
+.jugar{
+    width: 300px;
+    height: 50px;
+    border: #000 1px;
+    border-radius: 15px;
+    font-family: Roboto;
+    font-size: 34px;
+    color: var(--fuente-clara);
+    background-color: var(--fondo-jugar);
+    margin: 0px auto;
+}
+.informacion{
+    top: 3.5554%;
+    left: 5.55%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 940px;
+    background-color: var(--p-luz-1);
+    height: 1190px;
+    
+}
+.informacion2{
+    margin: 1.9%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.contenedorInfo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.videoGuia, .TituloRecomendado{
+    font-family: Roboto;
+    font-size: 22px;
+}
+.TituloRecomendado{
+    color: var(--fuente-clara);
+    display: flex;
+    justify-content: center;
+}
+.parrafoVideo{
+    font-family: Roboto;
+    font-size: 16;
+    margin-top: 0;
+}
+.tituloDescripcion{
+    font-family: Roboto;
+    font-size: 26px;
+
+}
+.imagenParrafo{
+    margin: 0%;
+}
+.descripcion{
+    margin-top: 22.8%;
+    left:1%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+.Objetivo{
+    font-family: Roboto;
+    font-size:14px;
+}
+.descrip{
+    margin: 2%;
+    display: block;
+    position: relative;
+    font-family: Roboto;
+    font-size:22px;
+
+}
+.imagenesDescripcion{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 4%;
+
+}
+.contenedorCards{
+    justify-content: space-around;
+    position: relative;
+    background-color: rgb(105, 68, 53, 0.8);
+    width: 520px;
+    height: 580px;  
+    margin: 7%;
+}
+.cards{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 50% 50%;
+    margin: 4%;
+
+}
+.reseñasRecientes{
+    display: flex;
+}
+.contenedorComentarios{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 40% 60%;
+
+    background-color: rgb(240, 236, 228, 0.5);
+    width: 1384px;
+    height: 908px;
+    margin: 15%;
+
+}
+.anotherDivInTheWall {
+    background-color: rgb(255, 154, 72,0.7);
+    display: block;
+    border: 1px solid;
+    border-radius: 13px;
+    height: 130px;
+    margin: 5%;
+}
+
+.superiorComentarios{
+    width: 100%;
+    height: 20%;
+    margin: 4%;
+    padding: 5%;
+
+}
+.labelYcomentario{
+    display: flex;
+    font-family: Roboto;
+    font-size: 24px;
+    margin-left: 9.1%;
+}
+.user{
+    margin: 1%;
+    height: 70px;
+    width: 56px;
+}
+.inputYuser{
+    display: flex; 
+}
+.inputComentario{
+    display: block;
+    width: 450px;
+    left: 0.4%;
+}
+.EnviarBoton{
+    display: flex;
+    margin-left: 56.696%;
+   
+}
+.comentario2{
+    font-family: Roboto;
+    margin: 1%;
+    font-size: 16px;
+}
+.reseñaUser{
+    display: flex;
+    margin: 2.5%;
+    width: 55px;
+    height: 55px;
+}
+.UsuarioNombre{
+    margin-top: 0.6%;
+    font-weight: bold;
+    font-size: 19px;
+}
+.comentario2 , .UsuarioNombre2 , .usuarioFecha2{
+width: 100%;
+height: 0%;
+}
+.UsuarioNombre2{
+    font-size: 22px;
+    margin:2%;
+}
+.usuarioFecha{
+   
+    margin-top: 0%;
+    margin-left: 41%;
+    font-size: 18px;
+    font-family: Roboto;
+}
+.usuarioFecha2{
+    font-size: 17px;
+    margin-left: 1%;
+    font-family: Roboto;
+}
+
+.reseñaUtil{
+    width: 500px;
+    display: flex;
+    flex-direction: row;   
+}
+.reseñasRecientes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.rowReseña{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.columnReseña{
+    display: flex;
+    flex-direction: column;
+    margin: 2%; 
+}
+.comentario{
+    display: block;
+    margin-top: 0%;
+}
+.columna{
+    display: flex;
+    flex-direction: column;
+    
+}
+.comentariosUtiles{
+    font-style: oblique;
+    font-size: 19px;
+    margin-left: 13.4%;
+}
+.comentariosUtiles2{
+    margin-left: 5%;
+    margin-top: 11%;
+}
+
+
+
+

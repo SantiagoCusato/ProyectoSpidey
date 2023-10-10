@@ -1,0 +1,171 @@
+
+:root {
+    --color-principal: rgb(255, 154, 72);
+    --p-transparencia-1: #ff9a48cf;
+    --p-transparencia-8: #FF9A4810;
+    --p-luz-1: hsl(27, 100%, 81%);
+    --p-sombra-1: #FF8827;
+
+
+    --color-secundario: rgb(105, 68, 53);
+    --s-luz-1: #784E3D;
+    --s-sombra-1: #38241D;
+    --secundario-t-1: rgba(106, 69, 54, 0.37);
+
+    --acento: #FB4091;
+    --a-sombra-1: #FF006E;
+    --a-transparencia-1: rgba(251, 64, 145, 1);
+
+
+    --negro: #000;
+    --fuente-oscura: #272727;
+    --fuente-clara: #f0ece4;
+
+    --fondo-gratis: #6DBC3C;
+    --fuente-gratis: #7EFB32;
+
+    --fondo-jugar: #4759FF;
+
+    --tiempo-t-1: 0.3s;
+    --tiempo-t-2: 0.5s;
+    --tiempo-t-3: 1s;
+    --tiempo-t-4: 1.5s;
+}
+.footer {
+    width: 100%;
+    height: 37%;
+    position: absolute;
+    background-color: var(--Principal, #FF9A48);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-image: initial;
+}
+.contenedorLogo {
+    display: flex;
+    justify-content: center;
+    width: 224px;
+    height: 56.57px;
+    left: 780px;
+    top: 0px;
+    position: absolute;
+    background-color: var(--Principal, #FF9A48);
+    place-items: center;
+}
+.logoFooter {
+    display: flex;
+    justify-content: center;
+    width: 148.98px;
+    left: 75.02px;
+    top: 10px;
+    color: black;
+    font-size: 37px;
+    font-family: Rokkitt;
+    font-weight: 800;
+    overflow-wrap: break-word;
+    place-items: center;
+}
+.logos {
+    height: 49px;
+    width: 49px;
+}
+.contenedorContactos {
+    width: 340px;
+    height: 95px;
+    left: 358px;
+    top: 135px;
+    position: absolute;
+    margin: 10px;
+}
+.contacto {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 0%;
+    font-family: Roboto;
+    font-weight: 500;
+    overflow-wrap: break-word;
+}
+.telefono {
+    width: 168px;
+    height: 17px;
+    left: 0px;
+    top: 31px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: 300;
+}
+.email{
+    left: 0px;
+    top: 49px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: Roboto;
+}
+.direccion {
+    left: 0px;
+    top: 74px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: Roboto;
+}
+.contenedorInformacion {
+    width: 95%;
+    height: 60px;
+    left: 4%;
+    top: 19%;
+    position: absolute;
+}
+.parrafoFooter {
+    color: black;
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 400;
+    overflow-wrap: break-word;
+}
+.contenedorRedes {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 121px;
+    left: 1040px;
+    top: 153px;
+    position: absolute;
+}
+.redesSociales {
+    width: 181.33px;
+    top: 0px;
+    position: absolute;
+    color: black;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 600;
+}
+.instagramShuriken {
+    display: flex;
+    position: relative;
+    width: 140px;
+    margin: 1%;
+    top: 3px;
+    right: 3%;
+    color: black;
+    font-size: 20px;
+    font-family: Roboto;
+}
+.contenedorAcerca {
+    width: 100%;
+    height: 56px;
+    top: 311px;
+    right: 2%;
+    font-size: 25px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}

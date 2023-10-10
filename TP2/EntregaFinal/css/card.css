@@ -20,7 +20,9 @@ div.card img{
 div.card h4{
     background-color: var(--s-sombra-1);
     text-overflow: ellipsis;
+    overflow: hidden;
     white-space: nowrap;
+    padding: 2px 0px 6px 0px;
     padding-left: 4px;
 }
 

@@ -121,7 +121,7 @@
     }
 
     .slider-container .slider .slide img{
-      height: auto;
+      height: inherit;
     }
 
 

@@ -1,4 +1,5 @@
 footer{display: none;}
+
 @media only screen and (min-width: 768px) {
 :root {
     --color-principal: rgb(255, 154, 72);
@@ -35,49 +36,63 @@ footer{display: none;}
 .footer {
     display: block;
     width: 100%;
-    height:45%;
+    height:max-content;
     background-color: var(--Principal, #FF9A48);
     border: 1px;
     border-style: solid;
     border-color: rgb(0, 0, 0);
+    
 }
+.parrafoFooter{
+    display:flex;
+    text-align: center;
+    margin: 2%;
+}
+.contenedorFilafooter{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .contenedorColumna{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 .logoFooter {
     display: flex;
     justify-content: center;
     width: 148.98px;
-    top: 1%;
+    margin-top:2%;
     color: black;
-    font-size: 37px;
+    font-size: 5rem;
     font-family: Rokkitt;
     font-weight: 800;
     overflow-wrap: break-word;
     place-items: center;
 }
 .logos {
-    height: 49px;
-    width: 49px;
+    height: 5rem;
+    width: 5rem;
 }
 .contenedorContactos {
-    width: 340px;
-    height: 95px;
-    left: 358px;
-    top: 135px;
+    height: 25%;
+    margin-left: 15%;
     margin: 10px;
+    
 }
 .contacto {
-   
     color: black;
     font-weight: bold;
     font-size: 25px;
-    margin-top: 0%;
-    font-family: Roboto;
-    font-weight: 500;
-    overflow-wrap: break-word;
+    font-family: Roboto;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid var(--negro);
 }
 .telefono {
     width: 168px;
@@ -142,12 +157,28 @@ footer{display: none;}
 .contenedorAcerca {
     width: 100%;
     height: 10%;
-    margin-top: 21%;
+    margin-top: 3rem;
     right: 2%;
     font-size: 25px;
     justify-content: center;
     align-items: center;
     display: inline-flex;
+}
+
+.footer-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    list-style: none;
+}
+
+.footer-ul i{
+    min-width: 50px;
+    text-align: center;
+}
+.footer-ul li{
+    
+    font-size: 2rem;
 }
 
     

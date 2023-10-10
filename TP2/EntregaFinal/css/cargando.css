@@ -23,6 +23,9 @@
 
 .cargando-container{
     width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cargando-container h4{

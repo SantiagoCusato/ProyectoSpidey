@@ -1,0 +1,133 @@
+@import "style.css";
+.container {
+    height: fit-content;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0px;
+}
+  
+  .slider-container {
+    box-sizing: border-box;
+    height: fit-content;
+    position: relative;
+    overflow: scroll;
+    /* padding: 0px 20px 20px 20px; */
+    margin: 1px;
+  }
+  
+  .container h3{
+    margin: 7px 0px 6px 0px;
+    margin-left: 35px;
+    border-bottom: 2px solid var(--color-secundario);
+  }
+
+  .slider-container .slider {
+    display: flex;
+    width: fit-content;
+    height: 100%; 
+    transition: all 2s;
+    padding-bottom: 10px;
+    overflow-x: scroll;
+  }
+  
+  .slider-container .slider .slide {
+    /* height: 90%; */
+    min-width: 320px;
+    height: 220px;
+    margin: auto 10px;
+    transition: filter var(--tiempo-t-1), transform var(--tiempo-t-3);
+  }
+
+  .slider-container .slider .slide img{
+    height: 160px;
+  }
+
+
+  
+  .mov-izquierda{
+    transform: skew(-15deg);
+  }
+  .mov-derecha{
+    transform: skew(15deg);
+  }
+
+  .container img.btn{
+    width: 55px;
+    height: 55px;
+  }
+
+  .container div.display{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .flecha{
+    position: relative;
+    margin: auto 0px;
+    z-index: 1;
+    transition: all var(--tiempo-t-2) ease-in-out;
+    cursor: pointer;
+    display: none;
+  }
+
+  .flecha:hover{
+    filter: invert(100%) 
+    drop-shadow(0px 0px 6px var(--fondo-jugar)) 
+    drop-shadow(0px 0px 6px var(--fondo-jugar));
+    transform: scale(1.2);
+  }
+  
+
+  .flecha-out{
+    opacity: 0;
+  }
+
+  .slider-container .slider .slide {
+    min-width: 230px;
+  }
+
+
+  @media only screen and (min-width: 768px) {
+
+    .flecha{
+      display: block;
+    }
+
+    .slider-container .slider div:nth-child(1){
+      margin-left: 0px;
+    }
+
+    .slider-container .slider{
+      overflow-x: unset;
+      width: 12051px;
+    }
+
+    .slider-container {
+      overflow: hidden;
+    }
+
+    .slider-container .slider {
+      width: 1000%;
+      overflow-x: hidden;
+    }
+
+    .slider-container .slider .slide {
+      min-width: 0px;
+      width: calc(15vw - 24px);
+      height: calc((15vw - 24px) * 1.1751);
+    }
+
+    .slider-container .slider .slide img{
+      height: inherit;
+    }
+
+
+    
+  }
+
+  
+
+  

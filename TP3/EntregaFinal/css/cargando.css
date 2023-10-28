@@ -1,0 +1,92 @@
+@import "style.css";
+
+#spinner{
+    opacity: 1;
+    animation: spin 1.5s infinite linear ;
+}
+
+@keyframes spin {
+    0% {
+        transform:rotate(0deg);
+    }
+
+
+    40%{
+        transform:rotate(340deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+.cargando-container{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cargando-container h4{
+    text-align: center;
+}
+
+
+.progress{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    border: 10px solid var(--color-secundario);
+    border-radius: 15px;
+}
+.progress .color{
+    position: absolute;
+    background-color: var(--fuente-clara);
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres var(--tiempo-carga) linear;    
+}
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};
+
+
+ h4{  /*FUNDAMENTAL PARA EL FUNCIONAMIENTO DEL PROYECTO */
+    color: red;
+}
+
+
+.pagcargando{
+    position: absolute;
+    z-index: 800;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--p-transparencia-1);
+    outline: solid 2px red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 25vh;
+}
+
+.pag-cargando-out{
+    display: none;
+}

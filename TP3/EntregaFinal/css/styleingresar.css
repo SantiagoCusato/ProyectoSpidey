@@ -1,0 +1,175 @@
+:root {
+    --color-principal: #FF9A48;
+    --p-transparencia-1: #ff9a48cf;
+    --p-transparencia-8: #FF9A4810;
+    --p-luz-1: #FFC99D;
+    --p-sombra-1: #FF8827;
+
+
+    --color-secundario: #6A4536;
+    --s-luz-1: #784E3D;
+    --s-sombra-1: #38241D;
+    --secundario-t-1: rgba(106, 69, 54, 0.37);
+
+    --acento: #FB4091;
+    --a-sombra-1: #FF006E;
+
+
+    --negro: #000;
+    --fuente-oscura: #272727;
+    --fuente-clara: #f0ece4;
+
+    --fondo-gratis: #6DBC3C;
+    --fuente-gratis: #7EFB32;
+
+    --fondo-jugar: #4759FF;
+
+    --tiempo-t-1: 0.3s;
+    --tiempo-t-2: 0.5s;
+    --tiempo-t-3: 1s;
+}
+body  {
+    background-image: url(../img/fondoRegistro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    height: 1200px;
+    width: 100%;
+}
+.ingreso{
+    display:flex;
+    flex-direction: column;
+    border: 1px;
+    border-radius: 15px;
+    align-items: center;
+    margin: 40px;
+    width: 410px;
+    height: 1018px;
+    background-color:  rgba(106, 69, 54, 0.7)
+}
+.Shuriken{
+    width: 49px;
+    height: 49px;
+}
+.logo{
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 40px; 
+    font-family: Rokkitt;
+    font-weight: 700; 
+    
+}
+.contenedorSesion{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+}
+.inicio{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255); 
+    font-size: 40px; 
+    font-family: Roboto; 
+    font-weight: 500; 
+}
+.contenedorCrear{
+    display: grid;
+    place-items: center;
+}
+.label{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    color: var(--fuente-clara);
+    font-size:20px;
+}
+textarea:focus, input:focus{
+    outline: none;
+    background-color: var(--p-luz-1);
+    color:var(--fuente-oscura)
+}
+.input {
+    text-transform: uppercase;
+    color: var(--fuente-clara);
+    font-family: Roboto;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    margin: 6px;
+    width: 305px; 
+    height: 15px;
+    padding: 15px; 
+    margin-bottom: 30px;  
+    position: relative; 
+    background-color: #eb7d22; 
+    border-radius: 10px;   
+    gap: 10px; 
+    
+}
+.captcha{
+    width: 345px;
+    height: 86px;
+    margin-left: 1%;
+    
+}
+.Enviar{
+    cursor: pointer;
+    font-family: Roboto;
+    margin: 10px auto;  
+    color: var(--fuente-clara);
+    width: 305px;
+    height: 53px;
+    padding: 15px; 
+    background: #FF8827; 
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.17); 
+    border-radius: 50px; 
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+   
+}
+.linea{
+    margin: 15px 0px;
+    border-bottom:3px solid;
+    color: #eb7d22;
+    width: 85%;
+}
+.olvidado, .atras {
+    justify-content: center;
+    place-content: center;
+    margin: 6px;
+    height: 20px;
+    border-radius: 15px;
+    background: var(--blanco, #FFF);
+    color: rgba(0, 0, 0, 0.54); 
+    font-family: Roboto;
+    font-size: 15px;
+}
+.olvidado{
+    width: 220px;
+}
+.atras{
+    width: 45px;
+}
+.carteles{
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.carteles * {
+    text-decoration: none;
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+
+}

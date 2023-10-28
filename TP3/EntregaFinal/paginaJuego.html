@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/paginaJuego.css">
+    <link rel="icon" href="img/shurikenLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Rokkitt|Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7e53c9d9a2.js" crossorigin="anonymous"></script>
+    <title>Shuriken</title>
+</head>
+<body>
+    <header class="header">
+        <div class="flex-row-center  menu-container">
+            <div id="panel-izq" class="menu-logo flex-row-center">
+
+                <div class="menu btn-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav class="nav categorias" title="nav">
+                    <ul class="nav-ul">
+                        <li><i class="fas fa-gifts"></i><a href="#">Gratis</a></li>
+                        <li><i class="fas fa-clock"></i><a href="#">Anticipados</a></li>
+                        <li><i class="fas fa-crosshairs"></i><a href="#">Accion</a></li>
+                        <li><i class="fas fa-mountain"></i><a href="#">Aventura</a></li>
+                        <li><i class="fas fa-flag-checkered"></i><a href="#">Carreras</a></li>
+                        <li><i class="fas fa-star"></i><a href="#">Casual</a></li>
+                        <li><i class="fas fa-futbol"></i><a href="#">Deportes</a></li>
+                        <li><i class="fas fa-chess-knight"></i><a href="#">Estrategia</a></li>
+                        <li><i class="fas fa-puzzle-piece"></i><a href="#">Indie</a></li>
+                        <li><i class="fas fa-user-plus"></i><a href="#">Multiplayer</a></li>
+                        <li><i class="fas fa-plane"></i><a href="#">Simulador</a></li>
+                        <li><i class="fas fa-hat-wizard"></i><a href="#">Rol</a></li>
+                    </ul>
+                </nav>
+                <div class="logo flex-row-center">
+                    <a href="https://ramitafcex.github.io/InterfacesDeUsuario.github.io/TP2/EntregaFinal/cargando.html" id="homebtn">
+                        <img src="img/shurikenLogo.png" alt="logoShuriken">
+                        <h1>Shuriken</h1>
+                    </a>
+                </div>
+            </div>
+
+            <div id="panel-der" class="carrito-biblioteca-cuenta flex-row-center">
+                <div class="nav menu-usuario">
+                    <ul class="nav-ul nav-usuario">
+                        <li><a href="#"><i class="fas fa-user"></i>Mi Perfil</a></li>
+                        <li id="biblioteca"><a href="#"><i class="fas fa-book"></i>Bibilioteca</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i>Detalles</a></li>
+                        <li><a href="#"><i class="fas fa-wallet"></i>Cartera</a></li>
+                        <li><a href="#"><i class="fas fa-wrench"></i>Preferencias</a></li>
+                        <li><a href="#"><i class="fas fa-question"></i>Ayuda</a></li>
+                        <li><a href="#"><i class="fas fa-headset"></i>Soporte</a></li>
+                        <li><a href="https://ramitafcex.github.io/InterfacesDeUsuario.github.io/TP2/EntregaFinal/index.html"><i class="fas fa-door-open"></i>Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+                <img src="img/carrito.png" alt="btn-carrito">
+                <img src="img/biblioteca.png" alt="btn-biblioteca">
+                <div>
+                    <img class="btn-usuario" src="img/user.png" alt="btn-usuario">
+                </div>
+                
+            </div>
+
+            <div id="b-busqueda" class="barra-busqueda flex-row-center">
+                <form action="">
+                    <input type="text" placeholder="Buscar">
+                    <img src="img/buscar.png" alt="icono-buscar">
+                </form>
+            </div>
+        </div>
+</header>
+<main>
+    <div class="migas">Home>>Gratis>>GODZILLAvsKONG</div>
+    <div class="contenedorTitulo">
+        <img class="imagenVS" src="img/Godzilla_vs 2.png" alt="">
+    </div>
+
+    <div class="contenedorJuego">
+        
+            <!-- <button class="jugar">Jugar</button> -->
+        <canvas id="canvas" style="width: 1288px;
+        height: 644px;"></canvas>
+    </div>
+    <div class="superior">
+        <div class="informacion">
+            <div class="informacion2">
+                <div class="contenedorInfo">
+                    <h2 class="tituloDescripcion">¿Como se juega?</h2>
+                    <h3 class="videoGuia">Video guia</h3>
+                    <div class="imagenParrafo">
+                        <img class="imagen4enLinea" src="img/4 en linea 1 (1).png" alt="">
+                        <p class="parrafoVideo">Para mas informacion haz
+                            click aqui.</p>
+                    </div>
+                </div>
+                
+                
+                    
+                    
+
+                
+            </div>
+            <h3 class="Instrucciones">Instrucciones</h3>
+            <div class="descrip">El objetivo del juego es conectar
+                cuatro
+                fichas de King kong o Godzilla en la misma línea
+                (vertical, horizontal o diagonal).
+                Conecta 4 fichas en línea y ganarás la partida.
+                Con el puntero podremos elegir en que columna
+                ubicaremos nuestra ficha y esta descendera desde la
+                posicion mas alta a la mas baja posible.</div>
+                <h3 class="Instrucciones">Historia</h3>
+                <div class="descrip">Cansados de destruir ciudades la pelea
+                    definitiva de Godzilla contra Kong se define en un juego de
+                    4 en linea en tu plataforma favorita de juegos Shuriken.
+                    Los jugadores serán determinantes en una lucha colosal que
+                    pondra fin al interminable enfrentamiento de los gigantes
+                    del cine.</div>
+            <div class="imagenesDescripcion"> <img src="img/godzilla-vs-kong-critica-800 1.png" alt="">
+                <img src="img/godzilla-vs-kong-critica-800 1.png" alt="">
+                <img src="img/godzilla-vs-kong-critica-800 1.png" alt="">
+                <img src="img/godzilla-vs-kong-critica-800 1.png" alt=""></div>
+        </div>
+        <div class="contenedoresJuegos">
+            <div class="contenedorCards">
+                <h2 class="TituloRecomendado">Recomendados</h2>
+                <div class="cards">
+                    <div class="card slide cardtop">
+                        <img src="img/juegos/estrategia/divinityii.jpg" alt="Divinity 2">
+                        <h4 class="titulo-4">Divinity II</h4>
+                        <div class="estado-juego">
+                            <span class="precio comprable">$20</span>
+                            <span class="carro material-symbols-outlined agregar-juego comprable">add_shopping_cart</span>
+
+                            <span class="gratis span-out">Gratis</span>
+
+                            <span class="jugar span-out">Jugar</span>
+                        </div>
+                    </div>
+                    <div class="card slide cardtop">
+                        <img src="img/juegos/estrategia/citiesskyi.jpg" alt="Cities Skylines 1">
+                        <h4 class="titulo-4">Cities Skylines I</h4>
+                        <div class="estado-juego">
+                            <span class="precio comprable">$20</span>
+                            <span class="carro material-symbols-outlined agregar-juego comprable">add_shopping_cart</span>
+
+                            <span class="gratis span-out">Gratis</span>
+
+                            <span class="jugar span-out">Jugar</span>
+                        </div>
+                    </div>
+                    <div class="card slide">
+                        <img src="img/juegos/estrategia/warhammer.jpg" alt="Warhammer">
+                        <h4 class="titulo-4">Warhammer: Total War</h4>
+                        <div class="estado-juego">
+                            <span class="precio comprable">$20</span>
+                            <span class="carro material-symbols-outlined agregar-juego comprable">add_shopping_cart</span>
+
+                            <span class="gratis span-out">Gratis</span>
+
+                            <span class="jugar span-out">Jugar</span>
+                        </div>
+                    </div>
+                    <div class="card slide">
+                        <img src="img/juegos/estrategia/anno1404.jpg" alt="Anno 1404">
+                        <h4 class="titulo-4">Anno 1404</h4>
+                        <div class="estado-juego">
+                            <span class="precio comprable">$20</span>
+                            <span class="carro material-symbols-outlined agregar-juego comprable">add_shopping_cart</span>
+
+                            <span class="gratis span-out">Gratis</span>
+
+                            <span class="jugar span-out">Jugar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedorCards">
+                <h2 class="TituloRecomendado">Similares</h2>
+                <div class="cards">
+                    <div class="card slide cardtop">
+                        <img src="img/juegos/indies/lava.jpg" alt="Alerta lava">
+                        <h4 class="titulo-4">Alerta Lava</h4>
+                        <div class="estado-juego">
+                            <span class="precio comprable">$20</span>
+                            <span class="carro material-symbols-outlined agregar-juego comprable">add_shopping_cart</span>
+
+                            <span class="gratis span-out">Gratis</span>
+
+                            <span class="jugar span-out">Jugar</span>
+                        </div>
+                    </div>
+                    <div class="card slide cardtop">
+                        <img src="img/juegos/indies/luchadesaltos2.jpg" alt="Lucha de saltos 2">
+                        <h4 class="titulo-4">Lucha de saltos 2</h4>
+                        <div class="estado-juego">
+                            <span class="precio comprable">$20</span>
+                            <span class="carro material-symbols-outlined agregar-juego comprable">add_shopping_cart</span>
+
+                            <span class="gratis span-out">Gratis</span>
+
+                            <span class="jugar span-out">Jugar</span>
+                        </div>
+                    </div>
+                    <div class="card slide">
+                        <img src="img/juegos/indies/maldadmecanica.jpg" alt="Maldad mecanica">
+                        <h4 class="titulo-4">Maldad mecanica</h4>
+                        <div class="estado-juego">
+                            <span class="precio comprable">$20</span>
+                            <span class="carro material-symbols-outlined agregar-juego comprable">add_shopping_cart</span>
+
+                            <span class="gratis span-out">Gratis</span>
+
+                            <span class="jugar span-out">Jugar</span>
+                        </div>
+                    </div>
+                    <div class="card slide">
+                        <img src="img/juegos/accion/destiny.jpg" alt="destiny">
+                        <h4 class="titulo-4">Destiny</h4>
+                        <div class="estado-juego">
+                            <span class="precio comprable">$20</span>
+                            <span class="carro material-symbols-outlined agregar-juego comprable">add_shopping_cart</span>
+
+                            <span class="gratis span-out">Gratis</span>
+
+                            <span class="jugar span-out">Jugar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Comentarios">
+
+                <img src="img/P.Juego.Comentario.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="contenedorComentarios">
+      
+           <div class="superiorComentarios">
+            <div class="labelYcomentario">
+                <label>¿Que te parecio el juego ?<img src="img/Vector.png" alt="">
+                </label></div>
+                <div class="inputYuser">
+                    <img class="user" src="img/user.png" alt=""> <input class="inputComentario" type="text">
+                </div>
+                <div class="EnviarBoton">
+                    <button class="botonEnviar">Enviar</button>
+                </div>
+                
+            </div>
+    <div class="columna">
+        <h3 class="comentariosUtiles2">Reseñas mas recientes</h3>
+     <div class="anotherDivInTheWall">
+       <h5 class="UsuarioNombre2">X-MENEM</h5>
+         <h6 class="usuarioFecha2">20 ENE de 2021 14:23hs</h6>
+          <p class="comentario2">No entiendo como la gente puede
+            elegir a godzilla
+            antes que a kong </p>
+     </div>
+     <div class="anotherDivInTheWall">
+            <h5 class="UsuarioNombre2">Samid</h5>
+         <h6 class="usuarioFecha2">04 AGO de 2005 21:50hs</h6>
+          <p class="comentario2">Usted se tiene que arrepentir de lo que dijo </p>
+
+        </div>
+        <div class="anotherDivInTheWall">
+            <h5 class="UsuarioNombre2">Samid</h5>
+         <h6 class="usuarioFecha2">04 AGO de 2005 21:50hs</h6>
+          <p class="comentario2">Usted se tiene que arrepentir de lo que dijo </p>
+
+        </div>
+        <div class="anotherDivInTheWall">
+            <h5 class="UsuarioNombre2">Samid</h5>
+         <h6 class="usuarioFecha2">04 AGO de 2005 21:50hs</h6>
+          <p class="comentario2">Usted se tiene que arrepentir de lo que dijo </p>
+
+        </div>
+      
+        
+    </div>
+        
+
+        <div class="reseñasRecientes">
+            <div class="comentariosUtiles">
+                <h4>Reseñas mas útiles:</h4>
+            </div>
+            <div class="rowReseña">
+                <img class="reseñaUser" src="img/user.png" alt="">
+                <div class="columnReseña">
+                    <div class="reseñaUtil"><p class="UsuarioNombre">X-MENEM</p>
+                        <p class="usuarioFecha"> 20 ENE de 2021 14:23hs</p>
+                    </div>
+                    <p class="comentario">No entiendo como la gente
+                        puede elegir a godzilla
+                        antes que a kong </p>
+                </div>
+
+            </div>
+       
+
+        <div class="rowReseña">
+            <img class="reseñaUser" src="img/user.png" alt="">
+            <div class="columnReseña">
+                <div class="reseñaUtil"><p class="UsuarioNombre">X-MENEM</p>
+                    <p class="usuarioFecha"> 20 ENE de 2021 14:23hs</p>
+                </div>
+                <p class="comentario">No entiendo como la gente puede
+                    elegir a godzilla
+                    antes que a konggggggggggggggggggggg </p>
+            </div>
+            
+        </div>
+        <div class="rowReseña">
+            <img class="reseñaUser" src="img/user.png" alt="">
+            <div class="columnReseña">
+                <div class="reseñaUtil"><p class="UsuarioNombre">Willy Crock</p>
+                    <p class="usuarioFecha"> 20 ENE de 2021 14:23hs</p>
+                </div>
+                <p class="comentario">Yes I'm trying to understand
+                    If there's something to understand
+                    If my hair is ok
+                    And if there's life before the death
+                    If I'm a door
+                    Or I'm a street
+                    And if the universe keeps working when I slee </p>
+            </div>
+
+        </div>
+   
+
+    <div class="rowReseña">
+        <img class="reseñaUser" src="img/user.png" alt="">
+        <div class="columnReseña">
+            <div class="reseñaUtil"><p class="UsuarioNombre">Homero</p>
+                <p class="usuarioFecha"> 29 MAY de 2010 01:14hs</p>
+            </div>
+            <p class="comentario">Tres pequeñas frases que te ayudarán a lo largo de tu vida: la primera ¡Cúbreme!, la segunda ¡Buena idea Jefe!, y la tercera; Estaba así cuando llegué </p>
+        </div>
+        
+    </div>
+        
+    </div>
+
+</div>
+</main>
+<footer class="footer">
+    <div class="contenedorColumna">
+      <div class="logoFooter">
+          <img class="logos" src="img/shurikenLogo.png" alt="logoShuriken">Shuriken
+      </div>
+   
+         <p class="parrafoFooter">Shuriken Corporation®</p> 
+         <p class="parrafoFooter"> Todos los precios incluyen IVA (donde sea aplicable).</p> 
+           <p class="parrafoFooter">
+           Destacados
+           | Anticipados
+          | Acción
+          | Estrategia
+          | Arcade
+          | Indies
+          | Casual
+          | Deportes
+          | Simulador
+          | Multiplayer
+          | Carreras
+          | Rol
+          | Gratis
+         </p>
+      </div>
+  <div class="contenedorFilafooter">
+    <div class="contenedorContactos">
+      <div class="contacto">Contacto</div>
+      <ul class="footer-ul">
+      <li class=""><i class="fab fa-whatsapp"></i>+54 2284 599567</li>
+      <li class=""> <i class="far fa-envelope"></i>Shuriken@gmail.com</li>
+      <li class=""><i class="fas fa-map-pin"></i>Direccion postal: 7000, Tandil, Argentina</li>
+      </ul>
+    </div>
+
+    <div class="contenedorContactos">
+        <div class="contacto">Redes sociales</div>
+        <ul class="footer-ul">
+        <li class=""><i class="fab fa-facebook"></i></i>Shuriken Oficial</li>
+        <li class=""><i class="fab fa-instagram"></i>@ShurikenGaming</li>
+        <li class=""><i class="fab fa-twitter"></i>Shuriken Argentina</li>
+        </ul>
+      </div>
+
+  </div>
+    <div class="contenedorAcerca">
+      <div>Acerca de Shuriken | Empleo | Shurikenworks | Distribiucion de Shuriken |
+         Soporte | Tarjetas de regalo | <img class="redesLogos" src="img/share-android.png" alt=""> 
+      </div>
+    </div>
+ </footer>
+
+    
+<script src="js/header.js" type="text/javascript"></script>
+<script src="js/card.js" type="text/javascript"></script>
+<script src="js/Figure.js"></script>
+<script src="js/Circle.js"></script>
+<script src="js/Rect.js"></script>
+
+<script src="js/canvas_objeto.js"></script>
+<script src="js/canvas_ficha.js"></script>
+
+
+
+<script src="js/dibujar.js" type="text/javascript"></script>
+
+</body>
+</html>

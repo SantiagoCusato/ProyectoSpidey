@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/paginaJuego.css">
+    <link rel="stylesheet" href="css/contenedorJuego.css">
+    
+    <!-- <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/canva.css"> -->
     <link rel="icon" href="img/shurikenLogo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Rokkitt|Trirong">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -90,10 +94,74 @@
     </div>
 
     <div class="contenedorJuego">
+        <form action="" class="form-jugar">
+            <img class="imagenVS" src="img/Godzilla_vs 2.png" alt="" >
+
+            <div class="grupo-dificultad">
+                <label for="" id="dificultad">Ganar alineando:</label>
+                <div class="grupo-seleccion">
+                    <label class="opcion-personaje">
+                        <input type="radio" name="dificultad"  value="4" checked>
+                        <img src="img/4.jpg" />
+                    </label>
+                    <label class="opcion-personaje">
+                        <input type="radio" name="dificultad"  value="5">
+                        <img src="img/5.jpg" />
+                    </label>
+                    <label class="opcion-personaje">
+                        <input type="radio" name="dificultad"  value="6">
+                        <img src="img/6.jpg" />
+                    </label>
+                </div>
+            </div>
+
+            <div class="jugador-seleccion">
+                <input type="text" name="nombre-j1" placeholder="Jugador1" maxlength="12">
+                <div class="grupo-seleccion" id="player1-selection">
+                    <label class="opcion-personaje">
+                        <input type="radio" name="ficha-j1" value="godzilla" checked>
+                        <img src="img/fichas/godzilla.png" />
+                    </label>
+                    <label class="opcion-personaje">
+                        <input type="radio" name="ficha-j1" value="kong">
+                        <img src="img/fichas/kong.png" />
+                    </label>
+                    <label class="opcion-personaje">
+                        <input type="radio" name="ficha-j1" value="rex">
+                        <img src="img/fichas/rex.jpg" />
+                    </label>
+                </div>
+            </div>
+            <div class="jugador-seleccion">
+                <input type="text" name="nombre-j2" placeholder="Jugador2" maxlength="12">
+                <div class="grupo-seleccion" id="player2-selection">
+                    <label class="opcion-personaje">
+                        <input type="radio" name="ficha-j2" value="godzilla">
+                        <img src="img/fichas/godzilla.png" />
+                    </label>
+                    <label class="opcion-personaje">
+                        <input type="radio" name="ficha-j2" value="kong" checked>
+                        <img src="img/fichas/kong.png" />
+                    </label>
+                    <label class="opcion-personaje">
+                        <input type="radio" name="ficha-j2" value="rex">
+                        <img src="img/fichas/rex.jpg" />
+                    </label>
+                </div>
+            </div>
+            <button class="btn-jugar" type="submit">Jugar</button>
+        </form>
         
-            <!-- <button class="jugar">Jugar</button> -->
-        <canvas id="canvas" style="width: 1288px;
-        height: 644px;"></canvas>
+        <div class="info-juego hidden">
+                <h4>Turno: <span id="turno-jugador"></span></h4>
+                <h4 id="tiempo-juego">Tiempo</h4>
+        </div>
+
+        <canvas id="canvas" style="width: 1208px; height: 604px; display: block;"></canvas>
+        <!-- <div class="btn-canvas">
+            <button class="item-btn btn-play" id="btn-reiniciar">Restart</button>
+            <button class="item-btn item-btn-bajando" id="btn-game-out">Exit</button>
+        </div> -->
     </div>
     <div class="superior">
         <div class="informacion">
@@ -413,16 +481,13 @@
     
 <script src="js/header.js" type="text/javascript"></script>
 <script src="js/card.js" type="text/javascript"></script>
-<script src="js/Figure.js"></script>
-<script src="js/Circle.js"></script>
-<script src="js/Rect.js"></script>
 
-<script src="js/canvas_objeto.js"></script>
-<script src="js/canvas_ficha.js"></script>
-
-
-
+<script src="js/canvas_objeto.js" type="text/javascript"></script>
+<script src="js/Tablero.js" type="text/javascript"></script>
+<script src="js/canvas_ficha.js" type="text/javascript"></script>
 <script src="js/dibujar.js" type="text/javascript"></script>
+
+<script src="js/formJugar.js"></script>
 
 </body>
 </html>

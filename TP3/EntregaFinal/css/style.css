@@ -11,19 +11,20 @@
     --s-sombra-1: #38241D;
     --secundario-t-1: rgba(106, 69, 54, 0.37);
 
-    --acento: #FB4091;
+    --acento: rgb(251, 64, 145);
     --a-sombra-1: #FF006E;
     --a-transparencia-1: rgba(251, 64, 145, 1);
 
 
     --negro: #000;
     --fuente-oscura: #272727;
-    --fuente-clara: #f0ece4;
+    --fuente-clara: rgb(240, 236, 228);
 
     --fondo-gratis: #6DBC3C;
     --fuente-gratis: #7EFB32;
 
     --fondo-jugar: #4759FF;
+    --fondo-juego-info: rgb(9, 20, 118);
 
     --tiempo-t-0: 0.1s;
     --tiempo-t-1: 0.3s;

@@ -72,15 +72,8 @@
     width: 372px;
     height: 77px;
 }
-.contenedorJuego{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    /* background-color: black; */
-    width: 92%;
-    height: 644px;
-    margin-left: 4%;
-}
+
+
 .jugar{
     width: 300px;
     height: 50px;

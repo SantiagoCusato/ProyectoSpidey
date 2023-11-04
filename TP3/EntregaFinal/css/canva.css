@@ -1,0 +1,12 @@
+#canvas{
+    border:1px solid black;
+    aspect-ratio: auto 1288 / 644;
+    display: block;
+}
+ 
+.fichas_img{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}

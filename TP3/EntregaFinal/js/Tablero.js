@@ -1,6 +1,7 @@
 class Tablero {
 
-    constructor(c, ctx, row, col) {
+    constructor(c, ctx, row, col, dificultad) {
+        this.dificultad = dificultad;
         this.canvas = c;
         this.ctx = ctx;
         this.tamaniocelda = 80; // Tamaño de celda
@@ -12,10 +13,9 @@ class Tablero {
         this.altoTotal =  this.tamaniocelda * this.rows;
         this.posInicialX = (1288 - this.tamaniocelda * this.cols) / 2;
         this.posInicialY = (644 - this.tamaniocelda * this.rows) / 2;
-        
+        this.colorGanador = 'rgb(229, 226, 49)';
+        this.bordeGanador = 10;
     }
-
-
 
     drawCirculo(col, row, color) {
         this.ctx.beginPath();
@@ -50,11 +50,7 @@ class Tablero {
         }
     }
 
-    
-
    AddFicha(event, ficha) {
-    // console.log("tablero inicializado ");
-    // console.log(this.Tablero);
         let col = 0;
         if(this.PosicionMouseValidaX(event) && this.PosicionMouseValidaY(event)){
             let posicionX = event.offsetX - this.posInicialX;
@@ -66,9 +62,73 @@ class Tablero {
 
                 ficha.setPosicionFinal(this.posInicialX+col*this.tamaniocelda+ficha.getRadio(), 
                     this.posInicialY+row*this.tamaniocelda+ficha.getRadio());
+                    //console.log(this.Tablero);
+                this.ControlarGanador(ficha.getJugador());
             }
         }
     }
+
+    ControlarGanador(jugador) {
+    const filas = this.rows;
+    const columnas = this.cols;
+    
+    // Arreglo temporal para fichas ganadoras
+    const fichasGanadoras = [];
+    
+    // Función para verificar alineaciones
+    const verificarAlineacion = (row, col, dr, dc) => {
+        const fichasGanadorasTemp = [];
+    
+        for (let i = 0; i < this.dificultad; i++) {
+        const newRow = row + i * dr;
+        const newCol = col + i * dc;
+    
+        if (
+            newRow < 0 || newRow >= filas ||
+            newCol < 0 || newCol >= columnas ||
+            this.Tablero[newRow][newCol] === null || // Verifica si la celda es null
+            this.Tablero[newRow][newCol].getJugador() !== jugador
+        ) {
+            return [];
+        }
+    
+        fichasGanadorasTemp.push(this.Tablero[newRow][newCol]);
+        }
+    
+        return fichasGanadorasTemp;
+    };
+    
+    for (let row = 0; row < filas; row++) {
+        for (let col = 0; col < columnas; col++) {
+        if (this.Tablero[row][col] !== null && this.Tablero[row][col].getJugador() === jugador) {
+            if (verificarAlineacion(row, col, 0, 1).length > 0) {
+            fichasGanadoras.push(...verificarAlineacion(row, col, 0, 1));
+            }
+            if (verificarAlineacion(row, col, 1, 0).length > 0) {
+            fichasGanadoras.push(...verificarAlineacion(row, col, 1, 0));
+            }
+            if (verificarAlineacion(row, col, -1, 1).length > 0) {
+            fichasGanadoras.push(...verificarAlineacion(row, col, -1, 1));
+            }
+            if (verificarAlineacion(row, col, 1, 1).length > 0) {
+            fichasGanadoras.push(...verificarAlineacion(row, col, 1, 1));
+            }
+        }
+        }
+    }
+    
+    // Si el tamaño del arreglo de fichas ganadoras es igual o mayor que la dificultad, marcarlas
+    if (fichasGanadoras.length >= this.dificultad) {
+        fichasGanadoras.forEach(ficha => {
+        ficha.draw(this.colorGanador, this.bordeGanador);
+        });
+        HayGanador(jugador);
+        //console.log(`${jugador} ha ganado el juego.`);
+    }
+    }
+
+      
+
 
     PosicionMouseValidaX(event){
         return event.offsetX > this.posInicialX 

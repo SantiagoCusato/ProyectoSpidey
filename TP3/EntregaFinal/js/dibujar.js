@@ -16,7 +16,9 @@ let imageFondo = new Image();
 imageFondo.src = CANVAS_IMG_BACKGROUND;
 let jnombre1 = 'jugador1';
 let jnombre2 = 'jugador2';
-
+let fichasUtilizadas = 0;
+let filas = 0;
+let columnas = 0;
 let tablero = null;
 
 
@@ -29,13 +31,13 @@ function init(dificultad, nombre1, ficha1, nombre2, ficha2){
     if(nombre2.length!=0){
         jnombre2 = nombre2;
     }
-    jugadorActual.innerHTML = jnombre1;
+    jugadorActual.innerHTML = "Turno "+ jnombre1;
     
     let imagenes = [];
 
-    let filas = Number.parseInt(dificultad) +1;
-    let columnas = Number.parseInt(dificultad)+2;
-    tablero = new Tablero(canvas, ctx, filas, columnas);
+    filas = Number.parseInt(dificultad) +1;
+    columnas = Number.parseInt(dificultad)+2;
+    tablero = new Tablero(canvas, ctx, filas, columnas, dificultad);
 
     canvas.style.display = 'block';
     canvas.width = CANVAS_WIDTH;
@@ -73,7 +75,7 @@ function init(dificultad, nombre1, ficha1, nombre2, ficha2){
     let total_fichas = ((filas * columnas) / 2) + 1;
     for (let i = 0; i < total_fichas; i++) {
         let f1 = new canvas_ficha(
-            nombre1,
+            jnombre1,
             'f1-' + i,
             ctx,
             100,
@@ -81,7 +83,7 @@ function init(dificultad, nombre1, ficha1, nombre2, ficha2){
             imagenJ1, "rgb(251, 64, 145)");
 
         let f2 = new canvas_ficha(
-            nombre2,
+            jnombre2,
             'f2-' + i,
             ctx,
             1100,
@@ -113,16 +115,6 @@ canvas.addEventListener('mousedown', function (event) {
                 fichaAMover = fichasJugadorActual[i];
                 break;
             }
-            // let x = mousePos.x;
-            // let y = mousePos.y;
-            // let dx = Math.abs(x - fichasJugadorActual[i].getPosCanvasX());
-            // let dy = Math.abs(y - fichasJugadorActual[i].getPosCanvasY());
-            // let distancia = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
-            // if (distancia <= fichasJugadorActual[i].getRadio() && fichasJugadorActual[i].isHabilitada()) {
-            //     fichaAMover = fichasJugadorActual[i];
-            //     break;
-            // }
-
         }
     }
 
@@ -154,11 +146,13 @@ canvas.addEventListener('mouseup', function (event) {
 
     if (fichaAMover != null) {
         posTempX = fichaAMover.getPosInicialX();
-        tablero.AddFicha(event, fichaAMover);
+        if(!endGame){
+            tablero.AddFicha(event, fichaAMover);
+        }
 
         if(posTempX == fichaAMover.getPosInicialX()){
             fichaAMover.setPosicionInicial();
-        }else{
+        }else if(!endGame){
             fichaAMover.setHabilitada(false);
             for (let i = 0; i < fichasJugadorActual.length-1; i++) {
                 if(fichasJugadorActual[i+1].getId() === fichaAMover.getId()){
@@ -167,9 +161,13 @@ canvas.addEventListener('mouseup', function (event) {
             }
             turnoJ1 = !turnoJ1;
             if(turnoJ1){
-                jugadorActual.innerHTML = jnombre1;
+                jugadorActual.innerHTML = "Turno "+jnombre1;
             }else{
-                jugadorActual.innerHTML = jnombre2;
+                jugadorActual.innerHTML = "Turno "+jnombre2;
+            }
+            fichasUtilizadas++;
+            if(fichasUtilizadas>=columnas*filas){
+                Empate();
             }
         }
     }
@@ -179,6 +177,26 @@ canvas.addEventListener('mouseup', function (event) {
     canvasReload();
 });
 
+function HayGanador(jugador){
+    finalizarJuego();
+    jugadorActual.innerHTML = "GANO "+jugador;
+}
+
+function Empate(){
+    jugadorActual.innerHTML = "EMPATE";
+    finalizarJuego();
+}
+
+function finalizarJuego(){
+    endGame = true;
+    listaFichasJugador1.forEach(element => {
+        element.setHabilitada(false);
+    });
+    listaFichasJugador2.forEach(element => {
+        element.setHabilitada(false);
+    });
+    clearInterval(intervaloTiempo);
+}
 
 function canvasReload() {
     ctx.drawImage(imageFondo, 0, 0, canvas.width, canvas.height);
@@ -221,122 +239,10 @@ function randomRGBA() {
     return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
-
-function validarJugada(jugador, cInicial, fInicial) {
-    let contador = 0;
-    for (let col = cInicial; col >= 0 && !endGame; col--) {
-        if (matriz_box[col][fInicial].getJugador() === jugador) {
-            contador++;
-            if (contador == dificultad) {
-                finJuego(jugador);
-            }
-        } else {
-            break;
-        }
-    }
-    for (let col = cInicial + 1; col <= columnas && !endGame; col++) {
-        if (matriz_box[col][fInicial].getJugador() === jugador) {
-            contador++;
-            if (contador == dificultad) {
-                finJuego(jugador);
-            }
-        } else {
-            break;
-        }
-    }
-
-    //VALIDACION ARRIBA ABAJO
-    contador = 0;
-    for (let fil = fInicial; fil >= 0 && !endGame; fil--) {
-        if (matriz_box[cInicial][fil].getJugador() === jugador) {
-            contador++;
-            if (contador == dificultad) {
-                finJuego(jugador);
-            }
-        } else {
-            break;
-        }
-    }
-    for (let fil = fInicial + 1; fil <= filas && !endGame; fil++) {
-        if (matriz_box[cInicial][fil].getJugador() === jugador) {
-            contador++;
-            if (contador == dificultad) {
-                finJuego(jugador);
-            }
-        } else {
-            break;
-        }
-    }
-
-    //VALIDACION DIAGONAL
-    contador = 0;
-    let cDiagonal = cInicial;
-    let fDiagonal = fInicial;
-    while (cDiagonal <= columnas && fDiagonal >= 0 && !endGame) {
-        if (matriz_box[cDiagonal][fDiagonal].getJugador() === jugador) {
-            contador++;
-            if (contador == dificultad) {
-                finJuego(jugador);
-            }
-            cDiagonal++;
-            fDiagonal--;
-        } else {
-            break;
-        }
-    }
-
-    cDiagonal = cInicial - 1;
-    fDiagonal = fInicial + 1;
-    while (cDiagonal >= 0 && fDiagonal <= filas && !endGame) {
-        if (matriz_box[cDiagonal][fDiagonal].getJugador() === jugador) {
-            contador++;
-            if (contador == dificultad) {
-                finJuego(jugador);
-            }
-            cDiagonal--;
-            fDiagonal++;
-        } else {
-            break;
-        }
-    }
-
-    //VALIDACION DIAGONAL
-    contador = 0;
-    cDiagonal = cInicial;
-    fDiagonal = fInicial;
-    while (cDiagonal >= 0 && fDiagonal >= 0 && !endGame) {
-        if (matriz_box[cDiagonal][fDiagonal].getJugador() === jugador) {
-            contador++;
-            if (contador == dificultad) {
-                finJuego(jugador);
-            }
-            cDiagonal--;
-            fDiagonal--;
-        } else {
-            break;
-        }
-    }
-    cDiagonal = cInicial + 1;
-    fDiagonal = fInicial + 1;
-    while (cDiagonal <= columnas && fDiagonal <= filas && !endGame) {
-        if (matriz_box[cDiagonal][fDiagonal].getJugador() === jugador) {
-            contador++;
-            if (contador == dificultad) {
-                finJuego(jugador);
-            }
-            cDiagonal++;
-            fDiagonal++;
-        } else {
-            break;
-        }
-    }
-}
-
-
 const ahora = new Date().getTime();
 
 // Establece la fecha y hora de finalización 10 minutos después
-const tiempoFinalizacion = ahora + 10 * 60 * 1000; // 10 minutos en milisegundos
+const tiempoFinalizacion = ahora + 10 * 60 * 700; // 10 minutos en milisegundos
 
 // Función para actualizar el contador regresivo
 function actualizarContador() {
@@ -345,6 +251,7 @@ function actualizarContador() {
 
     if (tiempoRestante <= 0) {
         document.getElementById('tiempo-juego').textContent = 'Tiempo agotado';
+        Empate();
     } else {
         const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
         const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
@@ -355,7 +262,7 @@ function actualizarContador() {
 }
 
 // Actualiza el contador cada segundo
-setInterval(actualizarContador, 1000);
+const intervaloTiempo = setInterval(actualizarContador, 1000);
 
 // Llama a actualizarContador una vez al principio para asegurarse de que se muestre el tiempo inicial
 actualizarContador();

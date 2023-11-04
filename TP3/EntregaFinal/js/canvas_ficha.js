@@ -31,8 +31,13 @@ class canvas_ficha extends canvas_objeto {
         return this.posInicialX;
     }
 
-    draw() {
-
+    draw(cGanador, bGanador) {
+        if(cGanador!=null){
+            this.color = cGanador;
+        }
+        if(bGanador!=null){
+            this.borde = bGanador;
+        }
         this.context.save();
         this.context.beginPath();
         
@@ -51,9 +56,6 @@ class canvas_ficha extends canvas_objeto {
                 
             this.context.restore();
         }
-
-        
-        
     }
 
     getRadio() {
@@ -82,10 +84,6 @@ class canvas_ficha extends canvas_objeto {
         }else{
             distancia = Math.sqrt((posX - this.getPosInicialX()) ** 2 + (posY - this.getPosInicialY()) ** 2);
         }
-        // console.log("Pos inicial ficha x:" + this.getPosInicialX() + " y: " + this.getPosInicialY());
-        // console.log("Pos click x:" + posX+ " y: " + posY);
-        // console.log("Distancia" + distancia);
-        // console.log("Dentro " + (distancia < this.radio+this.borde));
         return distancia < this.radio;
     }
 

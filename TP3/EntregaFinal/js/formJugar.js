@@ -28,38 +28,25 @@ document.addEventListener('DOMContentLoaded', function() {
         player2Radio.addEventListener('change', updateRadioButtons);
     });
 
-    // Initial call to set the disabled state based on the default values
     updateRadioButtons();
 
 
     
 
-    // Add an event listener for when the form is submitted
     form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent the form from submitting normally
+        e.preventDefault(); 
 
-        // Create a new FormData object and pass the form element to it
         const formData = new FormData(form);
 
-        // You can now access the form data using formData.get("name") where "name" is the name attribute of the form element
         const difficulty = formData.get('dificultad');
         const player1Name = formData.get('nombre-j1');
         const player1Character = formData.get('ficha-j1');
         const player2Name = formData.get('nombre-j2');
         const player2Character = formData.get('ficha-j2');
 
-        // You can do something with the form data, for example, log it to the console
-        // console.log('Difficulty:', difficulty);
-        // console.log('Player 1 Name:', player1Name);
-        // console.log('Player 1 Character:', player1Character);
-        // console.log('Player 2 Name:', player2Name);
-        // console.log('Player 2 Character:', player2Character);
 
         init(difficulty, player1Name, player1Character, player2Name, player2Character);
         form.classList.add('hidden');
-        // You can also send the data to a server or perform other actions here
-
-        // Optionally, you can reset the form after processing
         
     });
 });

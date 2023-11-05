@@ -1,7 +1,11 @@
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
 let jugadorActual = document.querySelector('#turno-jugador');
+let btnReiniciar = document.querySelector('#btn-reiniciar');
+let btnMenu = document.querySelector('#btn-menu');
+let controlesJuego = document.querySelector('.controles-juego');
 let contenedorInfo = document.querySelector('.info-juego');
+const form = document.querySelector('.form-jugar');
 const TIME = 300;
 const CANVAS_WIDTH = 1288;
 const CANVAS_HEIGHT = 644;
@@ -11,7 +15,6 @@ let listaFichasJugador1 = [];
 let listaFichasJugador2 = [];
 let fichaAMover = null;
 const CANVAS_IMG_BACKGROUND = "img/juegoBackground.jpg";
-//const CANVAS_IMG_BOX = "nube.png";
 let imageFondo = new Image();
 imageFondo.src = CANVAS_IMG_BACKGROUND;
 let jnombre1 = 'jugador1';
@@ -20,11 +23,23 @@ let fichasUtilizadas = 0;
 let filas = 0;
 let columnas = 0;
 let tablero = null;
-
+let intervaloTiempo = setInterval(actualizarContador, 1000);
+let ahora = new Date().getTime();
+let tiempoFinalizacion = ahora + 10 * 60 * 700;
 
 function init(dificultad, nombre1, ficha1, nombre2, ficha2){
-    contenedorInfo.classList.toggle('hidden');
-    
+    fichasUtilizadas = 0
+    endGame=false;
+    listaFichasJugador1 = [];
+    listaFichasJugador2 = [];
+    filas = 0;
+    columnas = 0;
+    ahora = new Date().getTime();
+    tiempoFinalizacion = ahora + 10 * 60 * 700;
+    intervaloTiempo = setInterval(actualizarContador, 1000);
+    turnoJ1 = true;
+    contenedorInfo.classList.remove('hidden');
+    controlesJuego.classList.remove('hidden');
     if(nombre1.length!=0){
         jnombre1 = nombre1;
     }
@@ -100,6 +115,17 @@ function init(dificultad, nombre1, ficha1, nombre2, ficha2){
         listaFichasJugador1[i] = f1;
         listaFichasJugador2[i] = f2;
     }
+    btnReiniciar.addEventListener('click', function(){
+        clearInterval(intervaloTiempo);
+        init(dificultad, nombre1, ficha1, nombre2, ficha2);
+    });
+
+    btnMenu.addEventListener('click', function(){
+        form.classList.remove('hidden');
+        controlesJuego.classList.add('hidden');
+        contenedorInfo.classList.add('hidden');
+    });
+
 }
 canvas.addEventListener('mousedown', function (event) {
     if (!endGame) {
@@ -179,12 +205,15 @@ canvas.addEventListener('mouseup', function (event) {
 
 function HayGanador(jugador){
     finalizarJuego();
-    jugadorActual.innerHTML = "GANO "+jugador;
+
+    jugadorActual.innerHTML = "GANO " + jugador;
+    clearInterval(intervaloTiempo);
 }
 
 function Empate(){
-    jugadorActual.innerHTML = "EMPATE";
     finalizarJuego();
+    jugadorActual.innerHTML = "EMPATE";
+    clearInterval(intervaloTiempo);
 }
 
 function finalizarJuego(){
@@ -195,7 +224,6 @@ function finalizarJuego(){
     listaFichasJugador2.forEach(element => {
         element.setHabilitada(false);
     });
-    clearInterval(intervaloTiempo);
 }
 
 function canvasReload() {
@@ -239,34 +267,24 @@ function randomRGBA() {
     return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
-const ahora = new Date().getTime();
 
-// Establece la fecha y hora de finalización 10 minutos después
-const tiempoFinalizacion = ahora + 10 * 60 * 700; // 10 minutos en milisegundos
-
-// Función para actualizar el contador regresivo
 function actualizarContador() {
-    const tiempoActual = new Date().getTime();
-    const tiempoRestante = tiempoFinalizacion - tiempoActual;
-
-    if (tiempoRestante <= 0) {
-        document.getElementById('tiempo-juego').textContent = 'Tiempo agotado';
-        Empate();
-    } else {
-        const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
-        const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
-
-        const tiempoRestanteFormato = `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
-        document.getElementById('tiempo-juego').textContent = `Tiempo restante: ${tiempoRestanteFormato}`;
+    if(!endGame){
+        const tiempoActual = new Date().getTime();
+        const tiempoRestante = tiempoFinalizacion - tiempoActual;
+    
+        if (tiempoRestante <= 0) {
+            document.getElementById('tiempo-juego').textContent = 'Tiempo agotado';
+            Empate();
+        } else {
+            const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+    
+            const tiempoRestanteFormato = `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+            document.getElementById('tiempo-juego').textContent = `Tiempo restante: ${tiempoRestanteFormato}`;
+        }
     }
+    
 }
-
-// Actualiza el contador cada segundo
-const intervaloTiempo = setInterval(actualizarContador, 1000);
-
-// Llama a actualizarContador una vez al principio para asegurarse de que se muestre el tiempo inicial
-actualizarContador();
-
-
 
 

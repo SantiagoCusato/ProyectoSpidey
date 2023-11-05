@@ -102,10 +102,29 @@ form * input[type="text"]{
     -moz-box-shadow: 0px 0px 0px 3px rgba(31,183,61,0.75);
 }
 
-.btn-jugar{
-    background-color: green;
+.btn-jugar, #btn-reiniciar, #btn-menu {
+    background-color: rgba(31,183,61,0.75);
+    transition: all 2 ease-in-out;
     color: var(--fuente-clara);
+    border-radius: 15px;
+    font-size: x-large;
+    padding: 10px;
+    cursor: pointer;
 }
+
+#btn-menu{
+    background-color: rgba(183, 66, 31, 0.75);
+}
+
+.btn-jugar:hover, #btn-reiniciar:hover{
+    background-color: rgba(31, 183, 61, 1);
+}
+
+#btn-menu:hover{
+    background-color: rgba(183, 66, 31, 1);
+}
+
+
 
 .btn-jugar:disabled{
     background-color: rgb(118, 163, 118);
@@ -139,6 +158,18 @@ form * input[type="text"]{
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+}
+
+
+
+.controles-juego{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    z-index: 40;
 }
 
 .hidden{

@@ -31,6 +31,10 @@
     --tiempo-t-4: 1.5s;
 }
 
+main{
+    padding: 10px 0;
+}
+
 .Instrucciones{
     margin-left: 2.4%;
 }

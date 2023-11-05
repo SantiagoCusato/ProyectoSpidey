@@ -102,29 +102,28 @@ class Tablero {
         for (let col = 0; col < columnas; col++) {
         if (this.Tablero[row][col] !== null && this.Tablero[row][col].getJugador() === jugador) {
             if (verificarAlineacion(row, col, 0, 1).length > 0) {
-            fichasGanadoras.push(...verificarAlineacion(row, col, 0, 1));
+            fichasGanadoras.push(...verificarAlineacion(row, col, 0, 1));//horizontal
             }
             if (verificarAlineacion(row, col, 1, 0).length > 0) {
-            fichasGanadoras.push(...verificarAlineacion(row, col, 1, 0));
+            fichasGanadoras.push(...verificarAlineacion(row, col, 1, 0));//vertical
             }
             if (verificarAlineacion(row, col, -1, 1).length > 0) {
-            fichasGanadoras.push(...verificarAlineacion(row, col, -1, 1));
+            fichasGanadoras.push(...verificarAlineacion(row, col, -1, 1));//diagonal izquierda
             }
             if (verificarAlineacion(row, col, 1, 1).length > 0) {
-            fichasGanadoras.push(...verificarAlineacion(row, col, 1, 1));
+            fichasGanadoras.push(...verificarAlineacion(row, col, 1, 1));//diagonal derecha
             }
-        }
+        } 
         }
     }
     
     // Si el tamaño del arreglo de fichas ganadoras es igual o mayor que la dificultad, marcarlas
     if (fichasGanadoras.length >= this.dificultad) {
-        fichasGanadoras.forEach(ficha => {
-        ficha.draw(this.colorGanador, this.bordeGanador);
-        });
-        HayGanador(jugador);
-        //console.log(`${jugador} ha ganado el juego.`);
-    }
+            fichasGanadoras.forEach(ficha => {
+            ficha.draw(this.colorGanador, this.bordeGanador);
+            });
+            HayGanador(jugador);
+        }
     }
 
       

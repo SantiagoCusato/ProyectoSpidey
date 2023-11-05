@@ -163,6 +163,9 @@ form * input[type="text"]{
 
 
 .controles-juego{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
     display: flex;
     flex-direction: row;
     width: fit-content;

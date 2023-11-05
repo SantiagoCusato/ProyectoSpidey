@@ -218,12 +218,10 @@ function Empate(){
 
 function finalizarJuego(){
     endGame = true;
-    listaFichasJugador1.forEach(element => {
-        element.setHabilitada(false);
-    });
-    listaFichasJugador2.forEach(element => {
-        element.setHabilitada(false);
-    });
+    for (let index = 0; index < listaFichasJugador1.length; index++) {
+        listaFichasJugador1[index].setHabilitada(false);
+        listaFichasJugador2[index].setHabilitada(false);
+    }
 }
 
 function canvasReload() {
@@ -258,16 +256,6 @@ function clearCanvas() {
     ctx.drawImage(imageFondo, 0, 0, canvas.width, canvas.height);
 }
 
-
-function randomRGBA() {
-    let r = Math.round(Math.random() * 255);
-    let g = Math.round(Math.random() * 255);
-    let b = Math.round(Math.random() * 255);
-    let a = 255;
-    return `rgba(${r}, ${g}, ${b}, ${a})`;
-}
-
-
 function actualizarContador() {
     if(!endGame){
         const tiempoActual = new Date().getTime();
@@ -284,7 +272,6 @@ function actualizarContador() {
             document.getElementById('tiempo-juego').textContent = `Tiempo restante: ${tiempoRestanteFormato}`;
         }
     }
-    
 }
 
 

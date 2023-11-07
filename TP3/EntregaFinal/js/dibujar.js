@@ -67,9 +67,21 @@ function init(dificultad, nombre1, ficha1, nombre2, ficha2){
     let imagenFicha3 = new Image();
     imagenFicha3.src = "img/rex.jpg";
 
+    let imagenFicha4 = new Image();
+    imagenFicha4.src = "img/mothra.jpg";
+
+    let imagenFicha5 = new Image();
+    imagenFicha5.src = "img/reyghidora.jpg";
+
+    let imagenFicha6 = new Image();
+    imagenFicha6.src = "img/rodan.jpg";
+
     imagenes.push(imagenFicha1);
     imagenes.push(imagenFicha2);
     imagenes.push(imagenFicha3);
+    imagenes.push(imagenFicha4);
+    imagenes.push(imagenFicha5);
+    imagenes.push(imagenFicha6);
 
     tablero.inicializarTablero();
     tablero.drawTablero();
@@ -77,7 +89,11 @@ function init(dificultad, nombre1, ficha1, nombre2, ficha2){
     let imagenJ1 = imagenes[0];
     let imagenJ2 = imagenes[1];
 
+    console.log('ficha1 = ' + ficha1);
+    console.log('ficha2 = ' + ficha2);
+
     for (let i = 0; i < imagenes.length; i++) {
+        console.log(imagenes[i].src);
         if(imagenes[i].src.includes(ficha1)){
             imagenJ1 = imagenes[i];
         }

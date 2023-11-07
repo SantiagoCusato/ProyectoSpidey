@@ -38,7 +38,7 @@ form *{
 }
 
 form * input[type="text"]{
-    margin: 5px 0 10px 0;
+    margin: 5px auto 10px auto;
     width: 240px;
     border-radius: 10px;
     background-color: var(--s-sombra-1);

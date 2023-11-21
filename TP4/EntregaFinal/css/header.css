@@ -1,0 +1,43 @@
+header{
+    background-color: var(--celeste-principal);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(180deg, #5499F8 0%, #5499F8 88%, rgba(84, 153, 248, 0) 100%);
+}
+
+
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+header .container img{
+    position: absolute;
+    top: 29%;
+    left: 46%;
+    transform: translate(-46%, 17%);
+}
+
+
+#comprar{
+    color: var(--fuente-azul);
+    background-color: var(--amarillo);
+    border: 8px solid var(--borde-azul);
+    border-radius: 999px;
+    font-size: 20px;
+    font-family: Lato;
+    font-weight: 900;
+    padding: 15px 43px;
+    -webkit-text-stroke: 2px #02187E;
+    letter-spacing: 2px;
+    filter: drop-shadow(4px 5px 0px var(--sombra-azul));
+    cursor: pointer;
+}

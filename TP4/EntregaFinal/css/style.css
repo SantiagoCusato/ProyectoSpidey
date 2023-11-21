@@ -1,32 +1,34 @@
 :root{
     --celeste-principal: #5499F8;
+    --borde-azul: #2981FF;
+    --sombra-azul: #02187E;
+    --fuente-azul: #02187E;
+    --amarillo: #FFE901;
 }
+
 
 body{
     height: fit-content;
-    width: 100%;
-}
-.header{
-    width: 100%;
-    background-color: var(--celeste-principal);
+    max-width: 100vw;
 }
 
-.header-scroll{
-    background: linear-gradient(180deg, #5499F8 0%, #5499F8 88%, rgba(84, 153, 248, 0) 100%);
+
+.container{
+    width: 1080px;
+    max-width: 1080px;
 }
+
 
 .header img{
     margin: 0 auto;
     display: block;
 }
 
-#pagina{
-    height: fit-content;
-}
+
 .key-art{
     display: flex;
     flex-direction: row;
-    background-image: url("img/Fondo1.png");
+    background-image: url("../img/Fondo1.png");
     background-position: bottom center;
     background-size: auto 502px;
     height: 880px;
@@ -57,67 +59,67 @@ body{
     top: 30%;
     height: 450px;
     width: 627px;
-    background-image: url("img/telarañaizq.png");
+    background-image: url("../img/telarañaizq.png");
 }
 #tela2{
     top:39.5%;
     left: 79.4%;
     width: 372px;
     height: 340px;
-    background-image: url("img/telarañader.png");
+    background-image: url("../img/telarañader.png");
 }
 #spider1{
     top: 24%;
     left: 10%;
     width: 360px;
     height: 444px;
-    background-image:url("img/spider1.png") ;
+    background-image:url("../img/spider1.png") ;
 }
 #spider2{
     top: 30%;
     left: 60%;
     width: 393px;
     height: 393px;
-    background-image:url("img/spider2.png") ;
+    background-image:url("../img/spider2.png") ;
 }
 #spider3{
     top: 25.5%;
     left: 32%;
     width: 465px;
     height: 465px;
-    background-image:url("img/spider3.png") ;
+    background-image:url("../img/spider3.png") ;
 }
 #titulo{
     left: 30%;
     width: 590px;
     height: 301px;
-    background-image: url("img/titulo.png");
+    background-image: url("../img/titulo.png");
 }
 #keyart-1{ 
     top: 14%;
     width: 452px;
     height: 720px;
-    background-image: url("img/EdificiosIzquierda.png");
+    background-image: url("../img/EdificiosIzquierda.png");
 }#keyart-3{
     left: 80%;
     top: 14%;
     width: 374px;
     height: 727.5px;
-    background-image: url("img/EdifiosDerecha.png");
+    background-image: url("../img/EdifiosDerecha.png");
 }
 #keyart-2{
     left: 40%;
     top: 71%;
     width: 543.5px;
     height: 213px;
-    background-image: url("img/EdificiosMedio.png");
+    background-image: url("../img/EdificiosMedio.png");
 }
 
 #parallax {
 	display: block;
 }
 #descripcion{
-    background-image: url("img/RectanguloBajo.png");
+    background-image: url("../img/RectanguloBajo.png");
     width: 100%;
     height: 844.4px;
     margin-top: 800px;

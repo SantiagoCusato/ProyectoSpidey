@@ -1,0 +1,8 @@
+#section1{
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(../img/Fondo1.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+}

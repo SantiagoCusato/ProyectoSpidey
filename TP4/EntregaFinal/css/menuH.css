@@ -1,0 +1,17 @@
+.btn-menu{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.line{
+    height: 4px;
+    width: 34px;
+    background-color: var(--amarillo);
+    border-radius: 999px;
+    border: 4px solid var(--borde-azul);
+    filter: drop-shadow(4px 5px 0px var(--sombra-azul));
+}

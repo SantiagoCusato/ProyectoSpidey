@@ -1,0 +1,120 @@
+body{
+    height: 9000px;
+    width: 1280px;
+}
+.header{
+    width: 100%;
+}
+
+#pagina{
+    height: fit-content;
+}
+.key-art{
+    display: flex;
+    flex-direction: row;
+    background-image: url("img/Fondo1.png");
+    background-position: bottom center;
+    background-size: auto 502px;
+    height: 880px;
+    width: 100%;
+	
+}
+#descripcion, #titulo, #keyart-1, #keyart-3, #keyart-2{
+    z-index: 1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  
+}
+ #spider1 , #spider2, #spider3{
+    z-index: 2;
+    
+    background-size: cover;
+    position: absolute;
+}
+#tela1, #tela2{
+    z-index: 3;
+    
+    background-size: cover;
+    position: absolute;
+
+}
+#tela1{
+    top: 30%;
+    height: 450px;
+    width: 627px;
+    background-image: url("img/telarañaizq.png");
+}
+#tela2{
+    top:39.5%;
+    left: 79.4%;
+    width: 372px;
+    height: 340px;
+    background-image: url("img/telarañader.png");
+}
+#spider1{
+    top: 24%;
+    left: 10%;
+    width: 360px;
+    height: 444px;
+    background-image:url("img/spider1.png") ;
+}
+#spider2{
+    top: 30%;
+    left: 60%;
+    width: 393px;
+    height: 393px;
+    background-image:url("img/spider2.png") ;
+}
+#spider3{
+    top: 25.5%;
+    left: 32%;
+    width: 465px;
+    height: 465px;
+    background-image:url("img/spider3.png") ;
+}
+#titulo{
+    left: 30%;
+    width: 590px;
+    height: 301px;
+    background-image: url("img/titulo.png");
+}
+#keyart-1{ 
+    top: 14%;
+    width: 452px;
+    height: 720px;
+    background-image: url("img/EdificiosIzquierda.png");
+}#keyart-3{
+    left: 80%;
+    top: 14%;
+    width: 374px;
+    height: 727.5px;
+    background-image: url("img/EdifiosDerecha.png");
+}
+#keyart-2{
+    left: 40%;
+    top: 71%;
+    width: 543.5px;
+    height: 213px;
+    background-image: url("img/EdificiosMedio.png");
+}
+
+#parallax {
+	display: block;
+}
+#descripcion{
+    background-image: url("img/RectanguloBajo.png");
+    width: 100%;
+    height: 844.4px;
+    margin-top: 800px;
+
+
+}
+#pagina{
+    display: flex;
+    flex-direction: column;
+}
+
+
+

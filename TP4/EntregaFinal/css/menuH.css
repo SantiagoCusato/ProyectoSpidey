@@ -5,6 +5,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     cursor: pointer;
+    margin-right: 173px;
 }
 
 .line{

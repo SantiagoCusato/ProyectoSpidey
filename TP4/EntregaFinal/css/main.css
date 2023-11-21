@@ -1,8 +1,112 @@
+main{
+    margin-top: 63px;
+}
+
+
 #section1{
     width: 100vw;
     height: 56.25vw;
-    background-image: url(../img/Fondo1.png);
+    background-image: url(../img/Fondo1x2.png);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 120%;
+    background-position-y: 25px;
+    background-position-x: -220px;
+}
+
+#conoce-a-spidey{
+    height: 33vw; 
+    width: 100%;
+}
+
+#conoce-a-spidey #fondoVioleta{
+    height: 65.9vw; 
+    width: 100vw;
+    position: relative;
+    top: -13%;
+}
+
+#conoce-a-spidey .columna{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    top: -182%;
+    z-index: 20;
+}
+
+#duende{
+    height: 921px;
+    width: 553px;
+    transform: translateX(-100px);
+    /* position: relative;
+    left: 66%; */
+}
+
+#texto-spidey-amigos{
+    width: 65%;
+}
+
+#texto-spidey-amigos img{
+    width: 751px;
+    height: 413px;
+    transform: rotateZ(-1deg);
+}
+
+#cards{
+    width: 1080px;
+    margin: 0 auto;
+    margin-top: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#cards div{
+    max-width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cards div p{
+    max-width: 90%;
+}
+
+#ghost, #ghost1, #ghost2, #ghost3{
+    background-repeat: no-repeat;
     background-size: cover;
+}
+
+#ghost{
+    background-image: url(../img/spidermanM.jpg);
+    margin-top: 10%;
+    height: 44vw;
+}
+#ghost1, #ghost2, #ghost3{
+    background-size: contain;
+}
+#ghost1{
+    width: 546px;
+    height: 326px;
+    position: relative;
+    top: -24%;
+}
+
+#ghost1:hover{
+    
+    transform: rotateY(50deg) rotateZ(15deg);
+}
+#ghost2{
+    width: 543px;
+    height: 325px;
+    position: relative;
+    top: -68%;
+}
+#ghost3{
+    width: 546px;
+    height: 326px;
+    position: relative;
+    top: -110%;
 }

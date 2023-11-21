@@ -1,9 +1,23 @@
+:root{
+    --celeste-principal: #5499F8;
+}
+
 body{
-    height: 9000px;
-    width: 1280px;
+    height: fit-content;
+    width: 100%;
 }
 .header{
     width: 100%;
+    background-color: var(--celeste-principal);
+}
+
+.header-scroll{
+    background: linear-gradient(180deg, #5499F8 0%, #5499F8 88%, rgba(84, 153, 248, 0) 100%);
+}
+
+.header img{
+    margin: 0 auto;
+    display: block;
 }
 
 #pagina{
@@ -17,19 +31,18 @@ body{
     background-size: auto 502px;
     height: 880px;
     width: 100%;
-	
 }
+
 #descripcion, #titulo, #keyart-1, #keyart-3, #keyart-2{
     z-index: 1;
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-  
 }
+
  #spider1 , #spider2, #spider3{
     z-index: 2;
-    
     background-size: cover;
     position: absolute;
 }

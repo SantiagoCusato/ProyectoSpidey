@@ -74,39 +74,65 @@ main{
     max-width: 90%;
 }
 
-#ghost, #ghost1, #ghost2, #ghost3{
-    background-repeat: no-repeat;
-    background-size: cover;
+
+
+#columna-gameplay{
+    max-width: 500px;
+    perspective: 500px;
+    position: inherit;
+    padding-left: 35px;
+    margin-top: -90px;
+
 }
 
 #ghost{
     background-image: url(../img/spidermanM.jpg);
     margin-top: 10%;
     height: 44vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#ghost-container{
+    width: 1080px;
+    max-width: 1080px;
 }
 #ghost1, #ghost2, #ghost3{
-    background-size: contain;
+    border-radius: 20px;
+    object-fit: cover;
+    transform-origin: 100% 50%;
+    transition: transform 0.5s;
 }
+
 #ghost1{
-    width: 546px;
-    height: 326px;
-    position: relative;
-    top: -24%;
+    transform: rotateY(20deg) rotateZ(-20deg);
+    height: 180px;
+    width: 350px;
+} 
+
+#ghost2{
+    transform: rotateY(20deg) rotateZ(-25deg) translateY(-22px);
+    height: 180px;
+    width: 350px;
+} 
+
+#ghost3{
+    height: 162px;
+    width: 324px;
+    transform: rotateY(32deg) rotateZ(-28deg) rotateX(28deg)translateY(-42px) translateX(10px);
 }
 
 #ghost1:hover{
-    
-    transform: rotateY(50deg) rotateZ(15deg);
+    transform: rotateY(20deg) rotateZ(-17deg);
 }
-#ghost2{
-    width: 543px;
-    height: 325px;
-    position: relative;
-    top: -68%;
+
+#ghost2:hover{
+    transform: rotateY(20deg) rotateZ(-20deg) translateY(-22px);
 }
-#ghost3{
-    width: 546px;
-    height: 326px;
-    position: relative;
-    top: -110%;
+
+#ghost3:hover{
+    transform: rotateY(32deg) rotateZ(-20deg) rotateX(28deg)translateY(-42px) translateX(10px);
 }

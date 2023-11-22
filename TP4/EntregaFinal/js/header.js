@@ -1,3 +1,15 @@
+let menuBtn = document.querySelector(".btn-menu");
+let opcionesMenu = document.querySelectorAll(".menu-btn");
+
+menuBtn.addEventListener("click", function(){
+
+
+
+  for (let index = 0; index < opcionesMenu.length; index++) {
+    opcionesMenu[index].classList.toggle("desplegar-menu-btn");
+  }
+});
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -15,3 +27,11 @@ function scrollFunction() {
     imgCont.style.width = "590px";
   }
 }
+
+
+document.addEventListener('DOMContentLoaded', function agregarTransicion() {
+  for (let index = 0; index < opcionesMenu.length; index++) {
+    opcionesMenu[index].style.transition = `all ${0.3 + index / 7}s ease-in-out`;
+    opcionesMenu[index].style.top = `${105 + index * 56.25}px`;
+  }
+});

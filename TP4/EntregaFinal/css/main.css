@@ -8,55 +8,53 @@ main{
     height: 56.25vw;
     background-image: url(../img/Fondo1x2.png);
     background-repeat: no-repeat;
-    background-size: 120%;
-    background-position-y: 25px;
-    background-position-x: -220px;
+    background-size: cover;
 }
 
 #conoce-a-spidey{
-    height: 33vw; 
     width: 100%;
+    background-image: url(../img/fondoDuende.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
-#conoce-a-spidey #fondoVioleta{
-    height: 65.9vw; 
-    width: 100vw;
-    position: relative;
-    top: -13%;
-}
-
 #conoce-a-spidey .columna{
-    margin: 0 auto;
+    width: 1080px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    position: relative;
-    top: -182%;
-    z-index: 20;
+    
+}
+#texto-spidey-amigos{
+    max-width: 70%;
+    color: var(--blanco);
+}
+
+#texto-spidey-amigos h4{
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+#texto-spidey-amigos p{
+    font-size: 20px;
 }
 
 #duende{
-    height: 921px;
-    width: 553px;
-    transform: translateX(-100px);
-    /* position: relative;
-    left: 66%; */
+    transform: translateX(-128px);
 }
 
-#texto-spidey-amigos{
-    width: 65%;
-}
 
-#texto-spidey-amigos img{
-    width: 751px;
-    height: 413px;
-    transform: rotateZ(-1deg);
-}
+
+
+
+
 
 #cards{
     width: 1080px;
     margin: 0 auto;
-    margin-top: 600px;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -71,6 +69,7 @@ main{
 }
 
 #cards div p{
+    font-size: 20px;
     max-width: 90%;
 }
 
@@ -82,7 +81,6 @@ main{
     position: inherit;
     padding-left: 35px;
     margin-top: -90px;
-
 }
 
 #ghost{
@@ -104,7 +102,7 @@ main{
     border-radius: 20px;
     object-fit: cover;
     transform-origin: 100% 50%;
-    transition: transform 0.5s;
+    transition: all 0.5s ease-in-out;
 }
 
 #ghost1{
@@ -126,13 +124,16 @@ main{
 }
 
 #ghost1:hover{
-    transform: rotateY(20deg) rotateZ(-17deg);
+    transform-origin: center center;
+    transform: rotateY(20deg) rotateZ(-17deg) scale(1.2);
 }
 
 #ghost2:hover{
-    transform: rotateY(20deg) rotateZ(-20deg) translateY(-22px);
+    transform-origin: center center;
+    transform: rotateY(20deg) rotateZ(-20deg) translateY(-22px) scale(1.2);
 }
 
 #ghost3:hover{
-    transform: rotateY(32deg) rotateZ(-20deg) rotateX(28deg)translateY(-42px) translateX(10px);
+    transform-origin: center center;
+    transform: rotateY(10deg) rotateZ(-20deg) translateY(-22px) scale(1.4);
 }

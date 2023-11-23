@@ -2,8 +2,8 @@ let menuBtn = document.querySelector(".btn-menu");
 let opcionesMenu = document.querySelectorAll(".menu-btn");
 
 menuBtn.addEventListener("click", function(){
-
-
+  menuBtn.classList.toggle('active');
+  menuBtn.classList.toggle('inactive');
 
   for (let index = 0; index < opcionesMenu.length; index++) {
     opcionesMenu[index].classList.toggle("desplegar-menu-btn");

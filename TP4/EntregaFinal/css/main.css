@@ -20,12 +20,17 @@ main{
     flex-direction: row;
     justify-content: center;
 }
-#conoce-a-spidey .columna{
+
+.columna{
     width: 1080px;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+#conoce-a-spidey .columna{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    
 }
 #texto-spidey-amigos{
     max-width: 70%;
@@ -52,8 +57,6 @@ main{
 
 
 #cards{
-    width: 1080px;
-    margin: 0 auto;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -94,10 +97,7 @@ main{
     background-size: cover;
 }
 
-#ghost-container{
-    width: 1080px;
-    max-width: 1080px;
-}
+
 #ghost1, #ghost2, #ghost3{
     border-radius: 20px;
     object-fit: cover;
@@ -137,3 +137,56 @@ main{
     transform-origin: center center;
     transform: rotateY(10deg) rotateZ(-20deg) translateY(-22px) scale(1.4);
 }
+
+
+#vengadores{
+    background-image: url(../img/vengadoresFondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vw;
+}
+
+#vengadores #columnaVengadores{
+    color: var(--blanco);
+    font-size: 60px;
+}
+
+#vengadores #columnaVengadores h4{
+    max-width: 60%;
+}
+
+#vengadores #columnaVengadores img{
+    width: 100%;
+    box-shadow: 26px 29px 41px 14px rgba(0, 0, 0, 0.15);
+}
+
+#masAmigos img{
+    width: 552px;
+    height: 303px;
+}
+
+div.amigosItem{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+#masAmigosT{
+    font-size: 60px;
+}
+div.amigosItem h4{
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+div.amigosItem p{
+    font-size: 20px;
+    margin: 0;
+}
+
+div.amigosItem div{
+    width: 43%;
+}
+

@@ -170,23 +170,45 @@ div.amigosItem{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-bottom: 150px;
 }
 #masAmigosT{
     font-size: 60px;
+    position: relative;
+    
 }
-div.amigosItem h4{
+div.amigosT h4{
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 25px;
 }
 
-div.amigosItem p{
+div.amigosT p{
     font-size: 20px;
     margin: 0;
 }
 
-div.amigosItem div{
+div#amigosImgs{
+    width: 51%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 200px;
+    height: fit-content;
+}
+
+div#amigosTextArea{
     width: 43%;
 }
 
+#amigosImgs img{
+    position: absolute;
+    opacity: 0; /* Inicialmente, todas las imágenes son transparentes */
+    transition: opacity 0.5s ease-in-out;
+}
+
+#amigosImgs img:nth-child(1){
+    opacity: 1;
+}
+
+.amigosT{
+    padding-bottom: 500px;
+}

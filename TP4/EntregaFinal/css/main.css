@@ -199,11 +199,21 @@ div#amigosTextArea{
     width: 43%;
 }
 
+div#amigosTextArea div:nth-child(4){
+    padding-bottom: 50px;
+}
+
 #amigosImgs img{
     position: absolute;
     opacity: 0; /* Inicialmente, todas las imágenes son transparentes */
     transition: opacity 0.5s ease-in-out;
 }
+
+#amigos-img-container{
+    width: 51%;
+    padding-bottom: 365px;
+}
+
 
 #amigosImgs img:nth-child(1){
     opacity: 1;
@@ -211,4 +221,30 @@ div#amigosTextArea{
 
 .amigosT{
     padding-bottom: 500px;
+}
+
+
+#frase{
+    background-image: url(../img/fraseFondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vw;
+    color: var(--blanco);
+}
+
+#frase div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 100%;
+    font-size: 60px;
+}
+
+#frase .columna h4{
+    max-width: 75%;
+}
+
+#frase .columna button{
+    width: 303px;
 }

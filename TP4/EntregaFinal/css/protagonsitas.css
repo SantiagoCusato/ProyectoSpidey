@@ -1,0 +1,81 @@
+#protagonistas {
+    height: 43vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3 ease-in-out;
+
+    /* background: linear-gradient(45deg, transparent 50%, red 50%); */
+    /* background: linear-gradient(4deg, transparent 21%, red 22%), 
+    linear-gradient(179deg, transparent 21%, white 22%), 
+    linear-gradient(-4deg, transparent 32%, pink 22%); */
+    /* background: linear-gradient(4deg, transparent 20%, #ffcccc 20%, #ffcccc 100%, transparent 100%); */
+    
+}
+#fondoProtagonistas{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    height: 70%;
+    content: url(../img/fondoProtagonista0.png);
+    transition: all 0.3s ease-in-out;
+}
+
+
+#protagonistas .columna {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 338px;
+    position: absolute;
+    z-index: 10;
+}
+
+#protagonistas .columna img {
+    transition: all 0.5s ease-in-out;
+}
+
+#protagonistas .columna img:nth-child(1) {
+    width: 24.81%;
+    margin-right: -57px;
+}
+
+#protagonistas .columna img:nth-child(2) {
+    width: 37%;
+}
+
+#protagonistas .columna img:nth-child(3) {
+    width: 31%;
+    margin-left: -43px;
+}
+
+
+
+
+
+#protagonistas .hovP1 img:nth-child(2), #protagonistas .hovP1 img:nth-child(3){
+    transform: scale(0.8);
+    filter: blur(3px);
+}
+
+#protagonistas .hovP2 img:nth-child(1), #protagonistas .hovP2 img:nth-child(3){
+    transform: scale(0.8);
+    filter: blur(3px);
+}
+
+
+#protagonistas .hovP3 img:nth-child(1), #protagonistas .hovP3 img:nth-child(2){
+    transform: scale(0.8);
+    filter: blur(3px);
+}
+
+
+
+.foc {
+    transform: scale(1.4);
+    filter: blur(0);
+    background-color: transparent; /* Restablece el fondo de color */
+}

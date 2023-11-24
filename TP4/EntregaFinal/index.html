@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/menuH.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/protagonsitas.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto|Rokkitt|Trirong">
 
@@ -25,7 +26,7 @@
                 
             </div>
             
-            <button id="comprar">COMPRAR</button>
+            <button class="comprar">COMPRAR</button>
         </div>
 
         
@@ -100,12 +101,15 @@
 
 
             <div class="amigosItem">
-                <div id="amigosImgs">
-                    <img src="img/amigos1.png" alt="">
-                    <img src="img/amigos2.png" alt="">
-                    <img src="img/amigos3.png" alt="">
-                    <img src="img/amigos4.png" alt="">
+                <div id="amigos-img-container">
+                    <div id="amigosImgs">
+                        <img src="img/amigos1.png" alt="">
+                        <img src="img/amigos2.png" alt="">
+                        <img src="img/amigos3.png" alt="">
+                        <img src="img/amigos4.png" alt="">
+                    </div>
                 </div>
+                
                 
                 <div id="amigosTextArea">
                     <div class="amigosT">
@@ -129,6 +133,29 @@
         </div>
     </section>
 
+
+    <section id="frase">
+        <div class="columna">
+            <h4>
+                ”un gran poder conlleva una gran responsabilidad”
+            </h4>
+            <button id="comprar" class="comprar">COMPRAR AHORA</button>
+        </div>
+    </section>
+
+    <section id="protagonistas">
+        <div id="columnaProtagonistas" class="columna">
+            <img src="img/protagonista1.png" alt="">
+            <img src="img/protagonista2.png" alt="">
+            <img src="img/protagonista3.png" alt="">
+        </div>
+        <img id="fondoProtagonistas" alt="" srcset="">
+    </section>
+
+    <section style="height: 50vw;">
+
+    </section>
+
     <!-- <div class="key-art" class="mov" data-speed="10" id="Parallax">
         <div class="mov" id="titulo" data-speed="40" ></div>
         <div class="mov" id="spider1"data-speed="300"></div>
@@ -149,6 +176,7 @@
    <script src="js/movimiento.js"></script>
    <script src="js/header.js"></script>
    <script src="js/masAmigos.js"></script>
+   <script src="js/protagonistas.js"></script>
     
 </body>
 </html>

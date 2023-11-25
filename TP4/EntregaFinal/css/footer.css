@@ -1,5 +1,26 @@
+#suscripcion{
+    position: relative;
+}
+
+#animacion1{
+    position: absolute;
+    bottom: 188px;
+    right: 354px;
+    height: 43px;
+    overflow: hidden;
+    width: 43px;
+}
+
+#animacion1 img{
+    animation: ataque 0.8s steps(6) infinite;
+}
+
+@keyframes ataque {
+    0% { margin-left: 0px; }
+    100% { margin-left: -258px; }
+}
+
 footer{
-    margin-top: 44px;
     display: flex;
     flex-direction: column;
     color: var(--blanco);

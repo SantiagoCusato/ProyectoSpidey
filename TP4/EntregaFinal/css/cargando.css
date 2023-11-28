@@ -1,0 +1,101 @@
+@import "style.css";
+
+body{
+    background: linear-gradient(0deg, #F7E3D8 20%, #8FBEFC 76%);
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#spinner{
+    opacity: 1;
+    animation: spin 1.5s infinite linear ;
+    height: 192px;
+    width: 192px;
+
+}
+
+@keyframes spin {
+    0% {
+        transform:rotate(0deg);
+    }
+
+
+    40%{
+        transform:rotate(340deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+.cargando-container{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cargando-container h4{
+    text-align: center;
+}
+
+
+.progress{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    border: 10px solid var(--borde-azul);
+    border-radius: 15px;
+}
+.progress .color{
+    position: absolute;
+    background-color: var(--amarillo);
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres 2.8s linear;    
+}
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};
+
+
+ h4{  /*FUNDAMENTAL PARA EL FUNCIONAMIENTO DEL PROYECTO */
+    color: rgba(255, 0, 0, 0);
+}
+
+
+.pagcargando{
+    position: absolute;
+    z-index: 800;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--p-transparencia-1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 25vh;
+}
+
+.pag-cargando-out{
+    display: none;
+}

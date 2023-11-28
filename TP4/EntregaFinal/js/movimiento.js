@@ -159,7 +159,6 @@ function ParallaxCard2() {
 		var card1 = document.querySelector('.movx2');
 		
 	var top = window.pageYOffset;
-	    console.log(top)
 		
 		
 		if(top>1200){
@@ -177,7 +176,6 @@ function ParallaxCard3() {
 	document.addEventListener("scroll", function() {
 		var card1 = document.querySelector('.movx3');
 		var top = window.pageYOffset;
-	console.log(top);
 		
 		if(top>1200){
 		setTimeout(function() {
@@ -196,7 +194,6 @@ function ParallaxCard1() {
 	document.addEventListener("scroll", function() {
 		var card1 = document.querySelector('.movx1');
 		var top = window.pageYOffset;
-	console.log(top);
 	
 		
 		if(top>1200){

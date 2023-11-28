@@ -309,12 +309,7 @@ div#amigosImgs{
 
 #amigos-img-container{
     width: 51%;
-    
-}
-div#amigosImgs{
-    width: 51%;
     padding-bottom: 365px;
- 
 }
 
 #amigosImgs img:nth-child(1){
@@ -352,8 +347,6 @@ div#amigosImgs{
 }
 @media only screen and (max-width: 1400px){
     #section1{
-        width: 118.3vw;
-        height: 66.25vw;
         background-image: url(../img/Fondo1x2.png);
         background-repeat: no-repeat;
         background-size: cover;

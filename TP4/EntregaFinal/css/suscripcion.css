@@ -84,3 +84,21 @@
     width: 1080px;
     height: 540px;
 }
+
+#animacion2{
+    position: absolute;
+    bottom: 126px;
+    right: 505px;
+    height: 62px;
+    overflow: hidden;
+    width: 133px;
+}
+
+#animacion3{
+    position: absolute;
+    bottom: 60px;
+    left: 208px;
+    height: 49px;
+    overflow: hidden;
+    width: 51px;
+}

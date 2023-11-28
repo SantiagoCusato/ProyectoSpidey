@@ -35,3 +35,10 @@ document.addEventListener('DOMContentLoaded', function agregarTransicion() {
     opcionesMenu[index].style.top = `${105 + index * 56.25}px`;
   }
 });
+
+
+let data = window.performance.getEntriesByType("navigation")[0].type;
+if(data == "reload"){
+  const HOME_URL = "https://ramitafcex.github.io/InterfacesDeUsuario.github.io/TP4/EntregaFinal/index.html"
+  location.href = HOME_URL;
+}

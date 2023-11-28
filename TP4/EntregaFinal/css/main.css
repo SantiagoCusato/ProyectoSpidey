@@ -12,6 +12,7 @@ main{
 }
 
 #conoce-a-spidey{
+    z-index: 1;;
     width: 100%;
     background-image: url(../img/fondoDuende.png);
     background-repeat: no-repeat;
@@ -19,12 +20,18 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
 }
 
 .columna{
     width: 1080px;
     margin: 0 auto;
     max-width: 1080px;
+}
+.columna1{
+    width: 1280px;
+    margin: 0 auto;
+    max-width: 1280px;
 }
 
 #conoce-a-spidey .columna{
@@ -158,9 +165,45 @@ main{
     max-width: 60%;
 }
 
-#vengadores #columnaVengadores img{
-    width: 100%;
+#vengadores #columnaVengadores img:nth-child(2){
+    width: 1080px;
     box-shadow: 26px 29px 41px 14px rgba(0, 0, 0, 0.15);
+}
+#Arbusto, #Plantas, #vengador1, #vengador1, #vengador2, #vengador3{
+    position: absolute;
+}
+#Arbusto, #Plantas{
+    left: 0;
+    Width:1080px;
+    Height:527.63px;
+}
+#Arbusto{
+    z-index: 1;
+}
+#Plantas{
+    z-index: 2;
+}
+#vengador1{
+    right: -43px;
+    bottom: -49px;
+    z-index: 1;
+    Width: 456.11px;
+    Height: 475.97px;
+}
+#vengador2{
+    left: 15px;
+    z-index: 1;
+    Width: 560.26px;
+    Height: 666.44px;
+    top: 196.4px;
+}
+#vengador3{
+    transform: rotateZ(2deg);
+    top: 60px;
+    left: 436px;
+    z-index: 5;
+    Width: 368.31px;
+    Height: 552.46px;
 }
 
 #masAmigos img{
@@ -190,13 +233,7 @@ div.amigosT p{
     margin: 0;
 }
 
-div#amigosImgs{
-    width: 51%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 200px;
-    height: fit-content;
-}
+
 
 div#amigosTextArea{
     width: 43%;
@@ -233,9 +270,12 @@ div#amigosTextArea div:nth-child(4){
 
 #amigos-img-container{
     width: 51%;
-    padding-bottom: 365px;
+    
 }
-
+div#amigosImgs{
+    width: 51%;
+ 
+}
 
 #amigosImgs img:nth-child(1){
     opacity: 1;
@@ -269,4 +309,30 @@ div#amigosTextArea div:nth-child(4){
 
 #frase .columna button{
     width: 303px;
+}
+@media only screen and (max-width: 1400px){
+    #section1{
+        width: 118.3vw;
+        height: 66.25vw;
+        background-image: url(../img/Fondo1x2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #keyart-1{
+        position: absolute;
+        height: 720px;
+        width: 1280px;
+        margin: 0;
+        background-image: url(../img/edificiosSuscripcion2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+        
+        
+    }
+    .columna1{
+        width: 1280px;
+        margin: 0 ;
+        max-width: 1280px;
+    }
 }

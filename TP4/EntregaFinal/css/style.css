@@ -15,10 +15,44 @@ body{
     height: fit-content;
     max-width: 100vw;
     font-family: Lato;
+    overflow: hidden;
+    
 }
+
 
 #section1{
     background-color: var(--celeste-principal);
+    
+    
+}
+#contenedor-spider{
+    width: 1280px;
+    margin: 0 auto;
+    max-width: 1280px;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 4ms, transform 0.8s;
+}
+.contenedor-edificios{
+    /*width: 1280px;*/
+    margin: 0 auto;
+    max-width: 1280px;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 4ms, transform 0.7s;
+}
+.contenedor-edificios.visible {
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+#contenedor-spider.visible {
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 6;
 }
 
 
@@ -26,120 +60,81 @@ body{
     width: 1080px;
     max-width: 1080px;
 }
-
-
-
-
-
-.key-art{
-    display: flex;
-    flex-direction: row;
-    background-image: url("../img/Fondo1.png");
-    background-position: bottom center;
-    background-size: auto 502px;
-    height: 880px;
+   
+#contenedor-spider{
     width: 100%;
+    height: 4px;
+    display: flex;
+    margin-bottom: auto;
+    
 }
 
-#descripcion, #keyart-1, #keyart-3, #keyart-2{/*#titulo*/
-    z-index: 1;
+
+
+
+
+ #keyart-1{
     position: absolute;
+    height: 720px;
+    width: 1280px;
+    margin: 0 auto;
+    background-image: url(../img/edificiosSuscripcion2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    z-index: 2;
+    
+    
 }
+
 
  #spider1 , #spider2, #spider3{
-    z-index: 2;
     background-size: cover;
-    position: absolute;
+   
 }
-#tela1, #tela2{
-    z-index: 3;
-    
-    background-size: cover;
-    position: absolute;
 
-}
-#tela1{
-    top: 30%;
-    height: 450px;
-    width: 627px;
-    background-image: url("../img/telarañaizq.png");
-}
-#tela2{
-    top:39.5%;
-    left: 79.4%;
-    width: 372px;
-    height: 340px;
-    background-image: url("../img/telarañader.png");
-}
 #spider1{
-    top: 24%;
-    left: 10%;
-    width: 360px;
-    height: 444px;
-    background-image:url("../img/spider1.png") ;
+    transform: translateY(216px) translateX(117px);
+    Width:360px;
+    Height: 444px;
+    z-index: 3;
 }
+    
+
 #spider2{
-    top: 30%;
-    left: 60%;
-    width: 393px;
-    height: 393px;
-    background-image:url("../img/spider2.png") ;
-}
-#spider3{
-    top: 25.5%;
-    left: 32%;
+    z-index: 4;
     width: 465px;
     height: 465px;
-    background-image:url("../img/spider3.png") ;
+    transform: translate3d(32px, 252px,0px);
+    
+   
+ 
 }
-/* #titulo{
-    left: 30%;
-    width: 590px;
-    height: 301px;
-    background-image: url("../img/titulo.png");
-} */
-#keyart-1{ 
-    top: 14%;
-    width: 452px;
-    height: 720px;
-    background-image: url("../img/EdificiosIzquierda.png");
-}#keyart-3{
-    left: 80%;
-    top: 14%;
-    width: 374px;
-    height: 727.5px;
-    background-image: url("../img/EdifiosDerecha.png");
+#tela1{
+    z-index: 6;
+    width: 557.82px;
+    Height: 627.27px;
+    transform: translate3d(-825px, 256px,-5px);
 }
-#keyart-2{
-    left: 40%;
-    top: 71%;
-    width: 543.5px;
-    height: 213px;
-    background-image: url("../img/EdificiosMedio.png");
+#spider3{
+    z-index: 5;
+    width: 393px;
+    height: 393px;
+    transform: translate3d(-627px, 230px, 0px);
+   
 }
-
-#parallax {
-	display: block;
-}
-#descripcion{
-    background-image: url("../img/RectanguloBajo.png");
-    width: 100%;
-    height: 844.4px;
-    margin-top: 800px;
-
+#tela2{
+    z-index: 5;
+    Width: 256.66px;
+    Height: 372.44px;
+    transform: translate3d(-735px, 285px, 0px);
 
 }
+
+
 #pagina{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.columna{
-    width: 1080px;
 }
 
 

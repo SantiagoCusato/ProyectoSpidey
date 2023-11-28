@@ -4,6 +4,7 @@ main{
 
 
 #section1{
+    position: relative;
     width: 100vw;
     height: 56.25vw;
     background-image: url(../img/Fondo1x2.png);
@@ -12,7 +13,8 @@ main{
 }
 
 #conoce-a-spidey{
-    z-index: 1;;
+    position: relative;
+    z-index: 500;
     width: 100%;
     background-image: url(../img/fondoDuende.png);
     background-repeat: no-repeat;
@@ -186,6 +188,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 60vw;
+    padding-top: 50px;
 }
 
 #vengadores #columnaVengadores{
@@ -345,6 +348,15 @@ div#amigosImgs{
 #frase .columna button{
     width: 303px;
 }
+
+#trianguloVioleta{
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 15.23%;
+    z-index: 400;
+}
+
 @media only screen and (max-width: 1400px){
     #section1{
         background-image: url(../img/Fondo1x2.png);

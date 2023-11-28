@@ -1,6 +1,6 @@
 #protagonistas {
     height: 43vw;
-    
+    margin: 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sectionProtagonistas.style.opacity = 0.3;
             document.getElementById('columnaProtagonistas').classList.remove('hovP' + (index + 1));
             setTimeout(function () {
-                sectionProtagonistas.style.content = 'url("img/fondoProtagonista0.png")';
+                sectionProtagonistas.style.content = 'unset';
                 sectionProtagonistas.style.opacity = 1;
             }, 300);
             imagen.classList.remove("foc");

@@ -33,7 +33,7 @@ document.body.onload = Parallax();
 function Parallax2() {
 
 	window.addEventListener("scroll", function(event){
-         // que carajos xd
+       
 		var top = window.pageYOffset;
         if(top<2000){
 		var capas = document.getElementsByClassName("mov1");
@@ -153,3 +153,58 @@ document.body.onload = Parallax7();
 
 
 
+function ParallaxCard2() {
+	;
+	document.addEventListener("scroll", function() {
+		var card1 = document.querySelector('.movx2');
+		
+	var top = window.pageYOffset;
+	    console.log(top)
+		
+		
+		if(top>1200){
+		setTimeout(function() {
+			card1.classList.add('visible');
+		}, 10)
+	}; 
+	})};
+
+
+document.body.onload = ParallaxCard2();
+function ParallaxCard3() {
+	
+	
+	document.addEventListener("scroll", function() {
+		var card1 = document.querySelector('.movx3');
+		var top = window.pageYOffset;
+	console.log(top);
+		
+		if(top>1200){
+		setTimeout(function() {
+			card1.classList.add('visible');
+		}, 10)
+	}; 
+	})};
+
+
+document.body.onload = ParallaxCard3();
+
+
+
+function ParallaxCard1() {
+	
+	document.addEventListener("scroll", function() {
+		var card1 = document.querySelector('.movx1');
+		var top = window.pageYOffset;
+	console.log(top);
+	
+		
+		if(top>1200){
+		setTimeout(function() {
+			card1.classList.add('visible');
+		}, 10)
+	}; 
+	})};
+
+
+document.body.onload = ParallaxCard1();

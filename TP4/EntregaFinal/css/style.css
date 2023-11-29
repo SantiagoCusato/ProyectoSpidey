@@ -94,12 +94,12 @@ body{
     transform: translateY(216px) translateX(117px);
     Width:360px;
     Height: 444px;
-    z-index: 3;
+    z-index: 600;
 }
     
 
 #spider2{
-    z-index: 4;
+    z-index: 600;
     width: 465px;
     height: 465px;
     transform: translate3d(32px, 252px,0px);
@@ -108,20 +108,20 @@ body{
  
 }
 #tela1{
-    z-index: 6;
+    z-index: 600;
     width: 557.82px;
     Height: 627.27px;
     transform: translate3d(-825px, 256px,-5px);
 }
 #spider3{
-    z-index: 5;
+    z-index: 600;
     width: 393px;
     height: 393px;
     transform: translate3d(-627px, 230px, 0px);
    
 }
 #tela2{
-    z-index: 5;
+    z-index: 600;
     Width: 256.66px;
     Height: 372.44px;
     transform: translate3d(-735px, 285px, 0px);

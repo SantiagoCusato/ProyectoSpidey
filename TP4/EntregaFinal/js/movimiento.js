@@ -205,3 +205,24 @@ function ParallaxCard1() {
 
 
 document.body.onload = ParallaxCard1();
+
+
+function movimiento3Dghost1() {
+
+	window.addEventListener("scroll", function(event){
+       
+		var top = window.pageYOffset;
+       if(top>1340){
+
+		var capas = document.getElementsByClassName("columna-gameplay-mov1");
+		var capa, speed, yPos;
+		for (var i = 0; i < capas.length; i++) {
+			capa = capas[i];
+			speed = capa.getAttribute('data-speed');
+			var yPos = -(top * speed / 100);
+			capa.setAttribute('style', 'transform: translateY('+ (yPos+(90)) +'px)');
+		}
+	}
+	});
+}
+document.body.onload = movimiento3Dghost1();
